@@ -46,5 +46,9 @@
         @apply w-[300px] md:w-[370px] h-[300px] md:h-[370px] rotate-[5.75deg] transition-transform duration-300
         ease-in-out hover:scale-105 hover:rotate-[3deg] rounded-xl
     }
+
+    .section-title {
+        @apply text-[20px] font-semibold text-left text-center bg-clip-text text-transparent;
+    }
 }
 
