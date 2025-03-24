@@ -33,23 +33,31 @@ export const STATS = [
     {id: "04", count: "X", label: "Personal Projects"}
 ]
 
+export const SKILLS_TAB = [
+    {id: "01", label: "All", value: "all"},
+    {id: "02", label: "Backend", value: "backend"},
+    {id: "03", label: "Frontend", value: "frontend"},
+    {id: "04", label: "Database", value: "data"},
+    {id: "05", label: "Repository", value: "repository"},
+    {id: "06", label: "DevOps", value: "devops"}
+]
 export const SKILLS = [
-    {id: "01", icon: FaJava, name: "Java", type: "backend", description: "lorem ipsum"},
-    {id: "02", icon: FaJs, name: "JavaScript", type: "frontend", description: "lorem ipsum"},
-    {id: "03", icon: TbBrandCpp, name: "C++", type: "backend", description: "lorem ipsum"},
-    {id: "04", icon: FaPython, name: "Python", type: "backend", description: "lorem ipsum"},
-    {id: "05", icon: FaHtml5, name: "Html", type: "frontend", description: "lorem ipsum"},
-    {id: "06", icon: FaCss3, name: "CSS", type: "frontend", description: "lorem ipsum"},
-    {id: "07", icon: SiOracle, name: "OracleSQL", type: "data", description: "lorem ipsum"},
-    {id: "08", icon: SiPostgresql, name: "PostgreSQL", type: "data", description: "lorem ipsum"},
-    {id: "09", icon: FaGit, name: "Git", type: "repository", description: "lorem ipsum"},
-    {id: "10", icon: GiTortoise, name: "Tortoise SVN", type: "repository", description: "lorem ipsum"},
-    {id: "11", icon: SiGradle, name: "Gradle", type: "devops", description: "lorem ipsum"},
-    {id: "12", icon: FaCss3, name: "Maven", type: "devops", description: "lorem ipsum"},
-    {id: "13", icon: FaGitlab, name: "Gitlab CI/CD", type: "devops", description: "lorem ipsum"},
-    {id: "14", icon: FaJenkins, name: "Jenkins", type: "devops", description: "lorem ipsum"},
-    {id: "15", icon: FaDocker, name: "Docker", type: "devops", description: "lorem ipsum"},
-    {id: "16", icon: SiRabbitmq, name: "RabbitMQ", type: "backend", description: "lorem ipsum"}
+    {id: "01", icon: FaJava, name: "Java", type: "backend", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."},
+    {id: "02", icon: FaJs, name: "JavaScript", type: "frontend", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."},
+    {id: "03", icon: TbBrandCpp, name: "C++", type: "backend", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."},
+    {id: "04", icon: FaPython, name: "Python", type: "backend", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."},
+    {id: "05", icon: FaHtml5, name: "Html", type: "frontend", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."},
+    {id: "06", icon: FaCss3, name: "CSS", type: "frontend", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."},
+    {id: "07", icon: SiOracle, name: "OracleSQL", type: "data", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."},
+    {id: "08", icon: SiPostgresql, name: "PostgreSQL", type: "data", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."},
+    {id: "09", icon: FaGit, name: "Git", type: "repository", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."},
+    {id: "10", icon: GiTortoise, name: "Tortoise SVN", type: "repository", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."},
+    {id: "11", icon: SiGradle, name: "Gradle", type: "devops", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."},
+    {id: "12", icon: FaCss3, name: "Maven", type: "devops", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."},
+    {id: "13", icon: FaGitlab, name: "Gitlab CI/CD", type: "devops", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."},
+    {id: "14", icon: FaJenkins, name: "Jenkins", type: "devops", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."},
+    {id: "15", icon: FaDocker, name: "Docker", type: "devops", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."},
+    {id: "16", icon: SiRabbitmq, name: "RabbitMQ", type: "backend", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."}
 ]
 
 export const ABOUT_ME = {
