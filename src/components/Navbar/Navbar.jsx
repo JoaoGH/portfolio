@@ -30,7 +30,8 @@ export const Navbar = () => {
     return (
         <nav className="container mx-auto sticky top-5 z-10">
             <div
-                className="flex items-center justify-between rounded-full bg-white/25 border border-[#000] backdrop-blur-[10px] m-5 p-3 md:p-0">
+                className="flex items-center justify-between rounded-full bg-white/25 border border-[#000]
+                            backdrop-blur-[10px] m-5 p-3 md:p-0">
 
                 <img className="h-7 ml-6 -mb-1"
                      src={LOGO}
@@ -67,8 +68,9 @@ export const Navbar = () => {
                     })}
                 </ul>
 
-                <button className="hidden md:block h-12 text-[15px] font-medium text-white rounded-full px-9 bg-gradient-primary
-                                    transition-transform duratio-300 ease-in-out hover:scale-105">Contact Me</button>
+                <button className="hidden md:block h-12 text-[15px] font-medium text-white rounded-full px-9
+                                    bg-gradient-primary transition-transform duratio-300 ease-in-out hover:scale-105">
+                    Contact Me</button>
             </div>
         </nav>
     )
