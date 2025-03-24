@@ -9,6 +9,7 @@
 @theme {
     --color-primary: #9403fc;
     --color-secondary: #7470f0;
+    --color-tertiary: #b57bdb;
 }
 
 @layer components {
@@ -26,6 +27,24 @@
         @apply relative before:content-[''] before:absolute before:w-0 before:h-[3px]
         before:rounded-full before:-bottom-1 before:left-0 before:transition-all before:duration-300 hover:before:w-full
         cursor-pointer;
+    }
+
+    .action-btn-outline {
+        @apply h-10 md:h-12 text-xs md:text-[14px] font-medium text-primary px-4 lg:px-10 rounded-[71px] border-2
+        border-primary;
+    }
+
+    .action-btn {
+        @apply h-10 md:h-12 text-xs md:text-[14px] font-medium text-white px-4 lg:px-10 rounded-[71px];
+    }
+
+    .btn-scale-anim {
+        @apply transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg;
+    }
+
+    .profile-pic {
+        @apply w-[300px] md:w-[370px] h-[300px] md:h-[370px] rotate-[5.75deg] transition-transform duration-300
+        ease-in-out hover:scale-105 hover:rotate-[3deg] rounded-xl
     }
 }
 
