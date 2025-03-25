@@ -20,8 +20,8 @@ import PROJECT_IMAGE_6 from "../assets/images/project.png"
 
 export const MENU_LINKS = [
     {id: "01", label: "Home", offset: -100, to: "hero"},
-    {id: "02", label: "Skills", offset: -80, to: "skills"},
-    {id: "03", label: "Projects", offset: -80, to: "projects"},
+    {id: "02", label: "Projects", offset: -80, to: "projects"},
+    {id: "03", label: "Skills", offset: -80, to: "skills"},
     {id: "04", label: "About Me", offset: -80, to: "about"},
     {id: "05", label: "Contact", offset: -80, to: "contact"},
 ]
@@ -65,9 +65,9 @@ export const ABOUT_ME = {
         "\n" +
         "Sed eu consectetur arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus placerat quis neque id condimentum. Duis vehicula congue dolor quis vulputate. Nam ut facilisis tellus. Aenean elementum odio eu vestibulum mollis. Phasellus ultricies consequat nibh, ac volutpat justo aliquam at. Maecenas malesuada lacus ante, at tempor tortor placerat sed. Nulla eu lacus arcu. In tempor tellus nec dui lobortis, in varius purus ultricies.",
     links: [
-        {id: "01", label: "LinkedIn", icon: FaLinkedin, link: ""},
-        {id: "02", label: "GitHub", icon: FaGithub, link: ""},
-        {id: "03", label: "Stack Overflow", icon: FaStackOverflow, link: ""},
+        {id: "01", label: "LinkedIn", icon: FaLinkedin, link: "https://www.linkedin.com/in/joao-gabriel-h/"},
+        {id: "02", label: "GitHub", icon: FaGithub, link: "https://github.com/JoaoGH"},
+        {id: "03", label: "Stack Overflow", icon: FaStackOverflow, link: "https://stackoverflow.com/users/10426962/jo%c3%a3o-g-hartmann"},
         {id: "04", label: "Leetcode", icon: SiLeetcode, link: ""}
     ],
 

@@ -8,17 +8,17 @@ import {Contact} from "./components/Contact/Contact.jsx";
 import {Footer} from "./components/Footer/Footer.jsx";
 
 const App = () => {
-  return (
-    <div>
-      <Navbar/>
-      <Hero/>
-      <TechnicalProficiency/>
-      <About/>
-      <Projects/>
-      <Contact/>
-      <Footer/>
-    </div>
-  );
+    return (
+        <div>
+            <Navbar/>
+            <Hero/>
+            <Projects/>
+            <TechnicalProficiency/>
+            <About/>
+            <Contact/>
+            <Footer/>
+        </div>
+    );
 }
 
 export default App
