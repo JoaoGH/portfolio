@@ -24,7 +24,7 @@ export const About = () => {
                     <div className="flex gap-4 mt-6">
                         {ABOUT_ME.links.map((item) => {
                             return (
-                                <a key={item.label} className="cursor-pointer group">
+                                <a key={item.label} className="cursor-pointer group" href={item.link} target="_blank">
                                     <item.icon className="text-2xl text-secondary transition-transform duration-300
                                             group-hover:rotate-12 group-hover:scale-110 group-hover:translate-y-[-2px]
                                             group-hover:text-primary" />
