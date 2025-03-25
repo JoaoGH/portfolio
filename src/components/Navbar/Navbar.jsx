@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from "react";
 import {MENU_LINKS} from "../../utils/data.js";
 import {Link} from "react-scroll";
+import {FaCode} from "react-icons/fa";
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(true);
-
-    const LOGO = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Copyleft.svg/640px-Copyleft.svg.png";
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -33,9 +32,15 @@ export const Navbar = () => {
                 className="flex items-center justify-between rounded-full bg-white/25 border border-purple-200
                             backdrop-blur-[10px] m-5 p-3 md:p-0">
 
-                <img className="h-7 ml-6 -mb-1"
-                     src={LOGO}
-                     alt="Logo"/>
+                <Link
+                    activeClass="active"
+                    to="hero"
+                    smooth
+                    spy
+                    offset={-100}
+                    className="ml-6 h-10 text-black flex items-center justify-center rounded-full cursor-pointer">
+                    <FaCode/>
+                </Link>
 
                 <button className="block md:hidden text-[#333] mr-6 focus:outline-none" onClick={toggleMenu}>
                     <svg className="w-6 h-6"
@@ -70,7 +75,8 @@ export const Navbar = () => {
 
                 <button className="hidden md:block h-12 text-[15px] font-medium text-white rounded-full px-9
                                     bg-gradient-primary transition-transform duratio-300 ease-in-out hover:scale-105">
-                    Contact Me</button>
+                    Contact Me
+                </button>
             </div>
         </nav>
     )
