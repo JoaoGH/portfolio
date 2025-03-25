@@ -5,16 +5,18 @@ import {TechnicalProficiency} from "./components/TechnicalProficiency/TechnicalP
 import {About} from "./components/About/About.jsx";
 import {Projects} from "./components/Projects/Projects.jsx";
 import {Contact} from "./components/Contact/Contact.jsx";
+import {Footer} from "./components/Footer/Footer.jsx";
 
 const App = () => {
   return (
-    <div className="mb-80">
+    <div>
       <Navbar/>
       <Hero/>
       <TechnicalProficiency/>
       <About/>
       <Projects/>
       <Contact/>
+      <Footer/>
     </div>
   );
 }
