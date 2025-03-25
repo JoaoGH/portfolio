@@ -50,5 +50,9 @@
     .section-title {
         @apply text-[20px] font-semibold text-left text-center bg-clip-text text-transparent;
     }
+
+    .arrow-btn {
+        @apply absolute top-1/2 transform -translate-y-1/2 bg-primary text-white p-2 rounded-full shadow;
+    }
 }
 
