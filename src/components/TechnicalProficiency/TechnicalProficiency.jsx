@@ -27,7 +27,7 @@ export const TechnicalProficiency = () => {
                     <h4 className="section-title bg-gradient-primary ">
                         Technical Proficiency
                     </h4>
-                    <p className="text-sm text-center mt-4 leading-6">
+                    <p className="text-sm text-center md:text-justify mt-4">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mollis libero.
                         Pellentesque eu lorem nulla.
                         Phasellus maximus, nunc eget malesuada pharetra, sem felis consectetur urna, quis porta lorem nibh a dui.
