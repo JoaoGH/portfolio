@@ -14,7 +14,10 @@ export const Hero = () => {
                                     mt-3 bg-gradient-primary bg-clip-text text-transparent">
                         Fullstack Developer</h1>
                     <p className="w-full lg:w-[500px] text-sm lg:text-base mt-4">
-                        Lorem ipsum
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mollis libero. Pellentesque
+                        eu lorem nulla. Phasellus maximus, nunc eget malesuada pharetra, sem felis consectetur urna,
+                        quis porta lorem nibh a dui. Duis condimentum magna at malesuada pretium. Nunc id neque metus.
+                        Vivamus ut nisi pellentesque tortor rhoncus dapibus non in metus. Etiam ut pellentesque ante.
                     </p>
 
                     <div className="flex justify-center lg:justify-start gap-4 md:gap-8 mt-6">
