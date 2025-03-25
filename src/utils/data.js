@@ -75,10 +75,10 @@ export const ABOUT_ME = {
 }
 
 export const PROJECTS = [
-    {id: "01", title: "Project 01", description: "Lorem ipsum", image: PROJECT_IMAGE_1, TAGS: ["Java"]},
-    {id: "02", title: "Project 02", description: "Lorem ipsum", image: PROJECT_IMAGE_2, TAGS: ["Java"]},
-    {id: "03", title: "Project 03", description: "Lorem ipsum", image: PROJECT_IMAGE_3, TAGS: ["Java"]},
-    {id: "04", title: "Project 04", description: "Lorem ipsum", image: PROJECT_IMAGE_4, TAGS: ["Java"]},
-    {id: "05", title: "Project 05", description: "Lorem ipsum", image: PROJECT_IMAGE_5, TAGS: ["Java"]},
-    {id: "06", title: "Project 06", description: "Lorem ipsum", image: PROJECT_IMAGE_6, TAGS: ["Java"]},
+    {id: "01", title: "Project 01", description: "Lorem ipsum", image: PROJECT_IMAGE_1, tags: ["Java"]},
+    {id: "02", title: "Project 02", description: "Lorem ipsum", image: PROJECT_IMAGE_2, tags: ["Java"]},
+    {id: "03", title: "Project 03", description: "Lorem ipsum", image: PROJECT_IMAGE_3, tags: ["Java"]},
+    {id: "04", title: "Project 04", description: "Lorem ipsum", image: PROJECT_IMAGE_4, tags: ["Java"]},
+    {id: "05", title: "Project 05", description: "Lorem ipsum", image: PROJECT_IMAGE_5, tags: ["Java"]},
+    {id: "06", title: "Project 06", description: "Lorem ipsum", image: PROJECT_IMAGE_6, tags: ["Java"]},
 ]
