@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {SKILLS, SKILLS_TAB} from "../../utils/data.js";
 import {Tabs} from "../Tabs/Tabs.jsx";
 import {SkillCard} from "../SkillCard/SkillCard.jsx";
+import {motion} from "framer-motion";
 
 export const TechnicalProficiency = () => {
     const [tabData, setTabData] = useState(SKILLS);
@@ -43,16 +44,21 @@ export const TechnicalProficiency = () => {
                     onChange={handleTabValueChange}
                 />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 min-h-[430px]">
-                    {tabData.map((skill) => {
+                    {tabData.map((skill, index) => {
                         return (
-                            <div key={skill.id}>
+                            <motion.div
+                                key={skill.id}
+                                initial={{opacity: 0, y: 20}}
+                                animate={{opacity: 1, y: 0}}
+                                transition={{duration: 0.4, delay: index * 0.1}}
+                            >
                                 <SkillCard
                                     icon={<skill.icon className="w-6 h-6 text-primary"/>}
                                     name={skill.name}
                                     description={skill.description}
                                     progress={skill.progress}
                                 />
-                            </div>
+                            </motion.div>
                         );
                     })}
                 </div>

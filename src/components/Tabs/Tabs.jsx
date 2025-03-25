@@ -1,4 +1,5 @@
 import React from "react";
+import {motion} from "framer-motion";
 
 export const Tabs = ({tabList, activeTab, onChange}) => {
     const getActiveStyles = (value) => {
@@ -10,12 +11,17 @@ export const Tabs = ({tabList, activeTab, onChange}) => {
             <div className="bg-[var(--color-tertiary)] rounded-full flex">
                 {tabList.map((item) => {
                     return (
-                        <button
+                        <motion.button
                             key={item.id}
                             className={`text-xs md:text-[15px] ${getActiveStyles(item.value)} rounded-full px-4 md:px-10 
                                         py-[6px] md:py-3`}
                             onClick={() => onChange(item.value)}
-                        >{item.label}</button>
+                            initial={{opacity: 0.8, scale: 1}}
+                            animate={{
+                                opacity: activeTab === item.value ? 1 : 0.8,
+                                scale: activeTab === item.value ? 1.05 : 1}}
+                            transition={{duration: 0.2}}
+                        >{item.label}</motion.button>
                     );
                 })}
             </div>
