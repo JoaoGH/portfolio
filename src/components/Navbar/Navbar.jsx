@@ -92,7 +92,7 @@ export const Navbar = () => {
 
                         {/* Botão Mobile */}
                         <div className="flex md:hidden items-center gap-3">
-                            <LanguageSelector mobile={true} />
+                            <LanguageSelector mobile={true}/>
                             <button
                                 onClick={toggleMenu}
                                 className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
@@ -118,9 +118,9 @@ export const Navbar = () => {
                 </div>
 
                 {/* Menu Mobile */}
-                <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} absolute top-16 left-0 w-full bg-white 
+                <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} absolute top-16 right-2 bg-white rounded-lg ml-12 min-w-3xs
                                 shadow-lg border border-purple-200`}>
-                    <ul className="flex flex-col space-y-2">
+                    <ul className="flex flex-col p-2 w-auto min-w-[160px]">
                         {MENU_LINKS.map((item) => (
                             <li key={item.id}>
                                 <Link
