@@ -18,6 +18,11 @@ import PROJECT_IMAGE_4 from "../assets/images/project.png"
 import PROJECT_IMAGE_5 from "../assets/images/project.png"
 import PROJECT_IMAGE_6 from "../assets/images/project.png"
 
+export const SUPPORTED_LANGUAGES = [
+    {code: "en", name: "English", country_code: "us"},
+    {code: "pt_br", name: "Português", country_code: "br"}
+]
+
 export const MENU_LINKS = [
     {id: "01", label: "Home", offset: -100, to: "hero"},
     {id: "02", label: "Projects", offset: -80, to: "projects"},
