@@ -80,7 +80,7 @@ export const Navbar = () => {
                     </ul>
 
                     {/* Controles do lado direito */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-4 min-w-1/10">
                         {/* Seletor de Idioma Desktop */}
                         <div className="hidden md:block">
                             <LanguageSelector />
