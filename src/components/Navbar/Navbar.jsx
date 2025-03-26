@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {MENU_LINKS} from "../../utils/data.js";
 import {Link} from "react-scroll";
 import {FaCode} from "react-icons/fa";
+import {LanguageSelector} from "../LanguageSelector/LanguageSelector.jsx";
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(true);
@@ -42,18 +43,25 @@ export const Navbar = () => {
                     <FaCode/>
                 </Link>
 
-                <button className="block md:hidden text-[#333] mr-6 focus:outline-none" onClick={toggleMenu}>
-                    <svg className="w-6 h-6"
-                         fill="none"
-                         stroke="currentColor"
-                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        {isOpen ? (
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                                  d="M6 18L18 6M6 6l12 12"/>
-                        ) : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                                  d="M4 6h18M4 12h16m-7 6h7"/>}
-                    </svg>
-                </button>
+                <div className="block md:hidden flex items-center gap-4">
+                    <button
+                        className="text-[#333] focus:outline-none"
+                        onClick={toggleMenu}
+                    >
+                        <svg className="w-6 h-6"
+                             fill="none"
+                             stroke="currentColor"
+                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            {isOpen ? (
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                      d="M6 18L18 6M6 6l12 12"/>
+                            ) : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                      d="M4 6h18M4 12h16m-7 6h7"/>}
+                        </svg>
+                    </button>
+
+                    <LanguageSelector mobile={true}/>
+                </div>
 
                 <ul className={`${isOpen ? "flex" : "hidden"} menu-wrapper`}>
                     {MENU_LINKS.map((item) => {
@@ -73,10 +81,7 @@ export const Navbar = () => {
                     })}
                 </ul>
 
-                <button className="hidden md:block h-12 text-[15px] font-medium text-white rounded-full px-9
-                                    bg-gradient-primary transition-transform duratio-300 ease-in-out hover:scale-105">
-                    Contact Me
-                </button>
+                <LanguageSelector/>
             </div>
         </nav>
     )
