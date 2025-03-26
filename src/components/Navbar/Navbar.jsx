@@ -13,11 +13,7 @@ export const Navbar = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth >= 768) {
-                setIsOpen(true);
-            } else {
-                setIsOpen(false);
-            }
+            setIsOpen(window.innerWidth >= 768);
         };
 
         handleResize();
