@@ -39,26 +39,6 @@ export const Navbar = () => {
                     <FaCode/>
                 </Link>
 
-                <div className="block md:hidden flex items-center gap-4">
-                    <button
-                        className="text-[#333] focus:outline-none"
-                        onClick={toggleMenu}
-                    >
-                        <svg className="w-6 h-6"
-                             fill="none"
-                             stroke="currentColor"
-                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            {isOpen ? (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                                      d="M6 18L18 6M6 6l12 12"/>
-                            ) : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                                      d="M4 6h18M4 12h16m-7 6h7"/>}
-                        </svg>
-                    </button>
-
-                    <LanguageSelector mobile={true}/>
-                </div>
-
                 <ul className={`${isOpen ? "flex" : "hidden"} menu-wrapper`}>
                     {MENU_LINKS.map((item) => {
                         return (
@@ -78,6 +58,26 @@ export const Navbar = () => {
                 </ul>
 
                 <LanguageSelector/>
+
+                <div className="block md:hidden flex items-center gap-4">
+                    <button
+                        className="text-[#333] focus:outline-none"
+                        onClick={toggleMenu}
+                    >
+                        <svg className="w-6 h-6"
+                             fill="none"
+                             stroke="currentColor"
+                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            {isOpen ? (
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                      d="M6 18L18 6M6 6l12 12"/>
+                            ) : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                      d="M4 6h18M4 12h16m-7 6h7"/>}
+                        </svg>
+                    </button>
+
+                    <LanguageSelector mobile={true}/>
+                </div>
             </div>
         </nav>
     )
