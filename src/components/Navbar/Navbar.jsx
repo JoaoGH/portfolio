@@ -43,47 +43,51 @@ export const Navbar = () => {
     }, []);
 
     return (
-        <nav className="sticky top-0 z-50 w-full bg-white/25 backdrop-blur-md border-b border-purple-200/50" ref={navbarRef}>
+        <nav className="sticky top-0 z-50 w-full bg-white/25 backdrop-blur-md border-b border-purple-200/50"
+             ref={navbarRef}>
             <div className="container mx-auto px-4">
-                <div className="flex items-center justify-between h-16">
-                    {/* Logo */}
-                    <Link
-                        activeClass="active"
-                        to="hero"
-                        smooth
-                        spy
-                        offset={-100}
-                        className="flex items-center justify-center rounded-full cursor-pointer"
-                        onClick={closeMenu}
-                    >
-                        <FaCode className="text-xl text-purple-600"/>
-                    </Link>
+                <div className="flex items-center h-16">
+                    {/* Logo e Menu */}
+                    <div className="flex items-center flex-1">
+                        {/* Logo */}
+                        <Link
+                            activeClass="active"
+                            to="hero"
+                            smooth
+                            spy
+                            offset={-100}
+                            className="flex items-center justify-center rounded-full cursor-pointer mr-4"
+                            onClick={closeMenu}
+                        >
+                            <FaCode className="text-xl text-purple-600"/>
+                        </Link>
 
-                    {/* Menu Desktop */}
-                    <ul className="hidden md:flex items-center space-x-6">
-                        {MENU_LINKS.map((item) => {
-                            return (
-                                <li key={item.id}>
-                                    <Link
-                                        activeClass="active"
-                                        to={item.to}
-                                        smooth
-                                        spy
-                                        offset={item.offset}
-                                        className="menu-item px-3 py-2 hover:text-purple-600 transition-colors"
-                                    >
-                                        {item.label}
-                                    </Link>
-                                </li>
-                            );
-                        })}
-                    </ul>
+                        {/* Menu Desktop */}
+                        <ul className="hidden md:flex items-center space-x-4">
+                            {MENU_LINKS.map((item) => {
+                                return (
+                                    <li key={item.id}>
+                                        <Link
+                                            activeClass="active"
+                                            to={item.to}
+                                            smooth
+                                            spy
+                                            offset={item.offset}
+                                            className="menu-item px-3 py-2 hover:text-purple-600 transition-colors"
+                                        >
+                                            {item.label}
+                                        </Link>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </div>
 
                     {/* Controles do lado direito */}
-                    <div className="flex items-center gap-4 min-w-1/10">
+                    <div className="flex items-center gap-2">
                         {/* Seletor de Idioma Desktop */}
                         <div className="hidden md:block">
-                            <LanguageSelector />
+                            <LanguageSelector/>
                         </div>
 
                         {/* Botão Mobile */}
