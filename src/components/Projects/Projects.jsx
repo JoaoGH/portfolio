@@ -62,6 +62,7 @@ export const Projects = () => {
                                             key={project.id}
                                             imgUrl={project.image}
                                             title={project.title}
+                                            description={project.description}
                                             tags={project.tags}
                                         />
                                     </div>
