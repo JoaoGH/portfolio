@@ -24,18 +24,18 @@ export const SUPPORTED_LANGUAGES = [
 ]
 
 export const MENU_LINKS = [
-    {id: "01", label: "Home", offset: -100, to: "hero"},
-    {id: "02", label: "Projects", offset: -80, to: "projects"},
-    {id: "03", label: "Skills", offset: -80, to: "skills"},
-    {id: "04", label: "About Me", offset: -80, to: "about"},
-    {id: "05", label: "Contact", offset: -80, to: "contact"},
+    {id: "01", label: "default.item.1", offset: -100, to: "hero"},
+    {id: "02", label: "default.item.2", offset: -80, to: "projects"},
+    {id: "03", label: "default.item.3", offset: -80, to: "skills"},
+    {id: "04", label: "default.item.4", offset: -80, to: "about"},
+    {id: "05", label: "default.item.5", offset: -80, to: "contact"},
 ]
 
 export const STATS = [
-    {id: "01", count: "6", label: "Years of Experience"},
-    {id: "02", count: "10", label: "Years of Study"},
-    {id: "03", count: "X", label: "Certificates Earned"},
-    {id: "04", count: "X", label: "Personal Projects"}
+    {id: "01", count: "6", label: "default.item.11"},
+    {id: "02", count: "10", label: "default.item.12"},
+    {id: "03", count: "X", label: "default.item.13"},
+    {id: "04", count: "X", label: "default.item.14"}
 ]
 
 export const SKILLS_TAB = [

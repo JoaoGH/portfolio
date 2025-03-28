@@ -2,18 +2,20 @@ import React from "react";
 import {IoMdMail} from "react-icons/io";
 import {ABOUT_ME} from "../../utils/data.js";
 import {ContactInfoCard} from "../ContactInfoCard/ContactInfoCard.jsx";
+import {useTranslation} from "react-i18next";
 
 export const Contact = () => {
+    const { t } = useTranslation();
+
     return (
         <section id="contact">
             <div className="container mx-auto p-10">
                 <div className="w-full lg:w-[60vw] mx-auto">
-                    <h4 className="section-title bg-gradient-primary">Contact Me</h4>
+                    <h4 className="section-title bg-gradient-primary">
+                        {t("default.item.5")}
+                    </h4>
                     <p className="text-sm text-center md:text-justify mt-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mollis libero. Pellentesque
-                        eu lorem nulla. Phasellus maximus, nunc eget malesuada pharetra, sem felis consectetur urna,
-                        quis porta lorem nibh a dui. Duis condimentum magna at malesuada pretium. Nunc id neque metus.
-                        Vivamus ut nisi pellentesque tortor rhoncus dapibus non in metus. Etiam ut pellentesque ante.
+                        {t("default.item.18")}
                     </p>
                 </div>
 
