@@ -32,10 +32,10 @@ export const MENU_LINKS = [
 ]
 
 export const STATS = [
-    {id: "01", count: "6", label: "default.item.11"},
-    {id: "02", count: "10", label: "default.item.12"},
-    {id: "03", count: "X", label: "default.item.13"},
-    {id: "04", count: "X", label: "default.item.14"}
+    {id: "01", count: "6", label: "stats.item.1"},
+    {id: "02", count: "10", label: "stats.item.2"},
+    {id: "03", count: "X", label: "stats.item.3"},
+    {id: "04", count: "X", label: "stats.item.4"}
 ]
 
 export const SKILLS_TAB = [
