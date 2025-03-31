@@ -1,6 +1,6 @@
 import React from "react";
 import {ABOUT_ME} from "../../utils/data.js";
-import {useTranslation} from "react-i18next";
+import {Trans, useTranslation} from "react-i18next";
 
 export const About = () => {
     const { t } = useTranslation();
@@ -9,7 +9,7 @@ export const About = () => {
     return (
         <section id="about" className="container mx-auto px-8 py-16">
             <h4 className="block lg:hidden w-[200px] section-title bg-gradient-primary text-left mb-16">
-                {t("default.item.4")}
+                {t("about.title")}
             </h4>
 
             <div className="flex flex-col lg:flex-row gap-16 items-start justify-between">
@@ -18,16 +18,22 @@ export const About = () => {
                 </div>
                 <div className="flex-1">
                     <h4 className="hidden lg:block w-[200px] section-title bg-gradient-primary text-left">
-                        {t("default.item.4")}
+                        {t("about.title")}
                     </h4>
                     <p className="text-sm text-justify leading-6 whitespace-pre-line mt-4">
-                        {ABOUT_ME.sumary}
+                        <Trans i18nKey="about.text" components={{ 1: <br /> }} />
                     </p>
 
                     <div className="flex gap-4 mt-6">
                         {ABOUT_ME.links.map((item) => {
                             return (
-                                <a key={item.label} className="cursor-pointer group" href={item.link} target="_blank">
+                                <a
+                                    key={item.id}
+                                    className="cursor-pointer group"
+                                    href={item.link}
+                                    target="_blank"
+                                    aria-label={item.label}
+                                >
                                     <item.icon className="text-2xl text-secondary transition-transform duration-300
                                             group-hover:rotate-12 group-hover:scale-110 group-hover:translate-y-[-2px]
                                             group-hover:text-primary" />

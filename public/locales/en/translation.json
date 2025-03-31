@@ -34,5 +34,7 @@
   "skills.tabs.item.4.label": "Database",
   "skills.tabs.item.5.label": "Repository",
   "skills.tabs.item.6.label": "DevOps",
+  "about.title": "About Me",
+  "about.text": "I am a fullstack developer with experience in Java and JavaScript, specializing in the Grails and Spring Boot ecosystem, and also in frameworks like ExtJS. I have a strong background in information security and secure development practices, along with experience in Docker, CI/CD, SQL databases, and messaging systems. I constantly seek to improve my skills and explore new technologies, with a particular interest in microservices, messaging, and scalable solutions.<1/><1/>Currently, I am expanding my portfolio with projects involving JWT, OAuth, Kafka, RabbitMQ, gRPC, and other modern technologies. I have experience in developing enterprise applications as well as creating automation and efficiency-driven solutions.<1/><1/>I am passionate about technical challenges, software engineering, and best programming practices. My goal is to develop robust and efficient systems while ensuring performance and security.<1/><1/>Below, you can find links to my professional profiles.",
   "default.item.18": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mollis libero. Pellentesque eu lorem nulla. Phasellus maximus, nunc eget malesuada pharetra, sem felis consectetur urna, quis porta lorem nibh a dui. Duis condimentum magna at malesuada pretium. Nunc id neque metus. Vivamus ut nisi pellentesque tortor rhoncus dapibus non in metus. Etiam ut pellentesque ante."
 }

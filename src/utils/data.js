@@ -66,9 +66,6 @@ export const SKILLS = [
 ]
 
 export const ABOUT_ME = {
-    sumary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mollis libero. Pellentesque eu lorem nulla. Phasellus maximus, nunc eget malesuada pharetra, sem felis consectetur urna, quis porta lorem nibh a dui. Duis condimentum magna at malesuada pretium. Nunc id neque metus. Vivamus ut nisi pellentesque tortor rhoncus dapibus non in metus. Etiam ut pellentesque ante.\n" +
-        "\n" +
-        "Sed eu consectetur arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus placerat quis neque id condimentum. Duis vehicula congue dolor quis vulputate. Nam ut facilisis tellus. Aenean elementum odio eu vestibulum mollis. Phasellus ultricies consequat nibh, ac volutpat justo aliquam at. Maecenas malesuada lacus ante, at tempor tortor placerat sed. Nulla eu lacus arcu. In tempor tellus nec dui lobortis, in varius purus ultricies.",
     links: [
         {id: "01", label: "LinkedIn", icon: FaLinkedin, link: "https://www.linkedin.com/in/joao-gabriel-h/"},
         {id: "02", label: "GitHub", icon: FaGithub, link: "https://github.com/JoaoGH"},
