@@ -46,5 +46,7 @@
   "contact.form.message.label": "Mensagem",
   "contact.form.message.hint": "Mensagem",
   "contact.form.submit.label": "Enviar",
-  "contact.form.submit.hint": "Enviar"
+  "contact.form.submit.hint": "Enviar",
+  "footer.copyright": "João Gabriel Hartmann. Todos os direitos reservados.",
+  "footer.using": "Desenvolvido com React e Tailwind CSS"
 }
