@@ -22,7 +22,10 @@
   "stats.item.2.label": "Years of Study",
   "stats.item.3.label": "Certificates Earned",
   "stats.item.4.label": "Personal Projects",
-  "default.item.15": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mollis libero. Pellentesque eu lorem nulla. Phasellus maximus, nunc eget malesuada pharetra, sem felis consectetur urna, quis porta lorem nibh a dui. Duis condimentum magna at malesuada pretium. Nunc id neque metus. Vivamus ut nisi pellentesque tortor rhoncus dapibus non in metus. Etiam ut pellentesque ante. <1/>Sed eu consectetur arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus placerat quis neque id condimentum. Duis vehicula congue dolor quis vulputate. Nam ut facilisis tellus. Aenean elementum odio eu vestibulum mollis. Phasellus ultricies consequat nibh, ac volutpat justo aliquam at. Maecenas malesuada lacus ante, at tempor tortor placerat sed. Nulla eu lacus arcu. In tempor tellus nec dui lobortis, in varius purus ultricies.",
+  "projects.title": "Projects",
+  "projects.text": "Below you’ll find my experiments and solutions built beyond the corporate environment. Each project here represents an opportunity to apply emerging technologies, test development best practices, and solve real-world problems through innovation.<1/><1/>These works reflect my passion for turning ideas into functional code. All are publicly available for collaboration and study.",
+  "projects.button.1.hint": "Previous",
+  "projects.button.2.hint": "Next",
   "default.item.16": "Technical Proficiency",
   "default.item.17": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mollis libero. Pellentesque eu lorem nulla. Phasellus maximus, nunc eget malesuada pharetra, sem felis consectetur urna, quis porta lorem nibh a dui. Duis condimentum magna at malesuada pretium. Nunc id neque metus. Vivamus ut nisi pellentesque tortor rhoncus dapibus non in metus. Etiam ut pellentesque ante.",
   "default.item.18": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mollis libero. Pellentesque eu lorem nulla. Phasellus maximus, nunc eget malesuada pharetra, sem felis consectetur urna, quis porta lorem nibh a dui. Duis condimentum magna at malesuada pretium. Nunc id neque metus. Vivamus ut nisi pellentesque tortor rhoncus dapibus non in metus. Etiam ut pellentesque ante."
