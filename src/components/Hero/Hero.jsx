@@ -4,8 +4,20 @@ import {StatInfoCard} from "../StatInfoCard/StatInfoCard.jsx";
 import {useTranslation} from "react-i18next";
 
 export const Hero = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const PROFILE_PIC = "https://as1.ftcdn.net/v2/jpg/05/16/27/58/1000_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg";
+
+    const handleDownload = () => {
+        const link = document.createElement('a');
+
+        const english = i18n.language === 'en';
+        const fileUrl = `/docs/6-CV${english ? "-English" : ""}.pdf`;
+        link.href = fileUrl;
+        link.download = "curriculum_vitae_JGHartrmann.pdf"
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
 
     return (
         <section id="hero" className="container mx-auto px-8">
@@ -21,11 +33,7 @@ export const Hero = () => {
 
                     <div className="flex justify-center lg:justify-start gap-4 md:gap-8 mt-6">
                         <button
-                            aria-label={t("hero.button.1.hint")}
-                            className="flex-1 md:flex-none action-btn-outline btn-scale-anim">
-                            {t("hero.button.1.text")}
-                        </button>
-                        <button
+                            onClick={handleDownload}
                             aria-label={t("hero.button.2.hint")}
                             className="flex-1 md:flex-none action-btn btn-scale-anim bg-gradient-primary">
                             {t("hero.button.2.text")}
