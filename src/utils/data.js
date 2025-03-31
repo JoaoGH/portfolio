@@ -24,11 +24,11 @@ export const SUPPORTED_LANGUAGES = [
 ]
 
 export const MENU_LINKS = [
-    {id: "01", label: "default.item.1", offset: -100, to: "hero"},
-    {id: "02", label: "default.item.2", offset: -80, to: "projects"},
-    {id: "03", label: "default.item.3", offset: -80, to: "skills"},
-    {id: "04", label: "default.item.4", offset: -80, to: "about"},
-    {id: "05", label: "default.item.5", offset: -80, to: "contact"},
+    {id: "01", label: "navbar.item.1", offset: -100, to: "hero"},
+    {id: "02", label: "navbar.item.2", offset: -80, to: "projects"},
+    {id: "03", label: "navbar.item.3", offset: -80, to: "skills"},
+    {id: "04", label: "navbar.item.4", offset: -80, to: "about"},
+    {id: "05", label: "navbar.item.5", offset: -80, to: "contact"},
 ]
 
 export const STATS = [

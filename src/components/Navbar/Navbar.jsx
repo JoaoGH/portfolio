@@ -75,9 +75,10 @@ export const Navbar = () => {
                                             smooth
                                             spy
                                             offset={item.offset}
+                                            aria-label={t(item.label + ".hint")}
                                             className="menu-item px-3 py-2 hover:text-purple-600 transition-colors"
                                         >
-                                            {t(item.label)}
+                                            {t(item.label + ".label")}
                                         </Link>
                                     </li>
                                 );
@@ -98,7 +99,7 @@ export const Navbar = () => {
                             <button
                                 onClick={toggleMenu}
                                 className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                aria-label="Menu"
+                                aria-label={t("navbar.item.menu.hint")}
                                 aria-expanded={isOpen}
                             >
                                 <svg className="w-6 h-6"
@@ -131,10 +132,11 @@ export const Navbar = () => {
                                     smooth
                                     spy
                                     offset={item.offset}
+                                    aria-label={t(item.label + ".hint")}
                                     className="menu-item block px-3 py-2 hover:bg-purple-50 rounded-md transition-colors"
                                     onClick={closeMenu}
                                 >
-                                    {t(item.label)}
+                                    {t(item.label + ".label")}
                                 </Link>
                             </li>
                         ))}
