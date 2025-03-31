@@ -73,14 +73,14 @@ export const ABOUT_ME = {
         {id: "01", label: "LinkedIn", icon: FaLinkedin, link: "https://www.linkedin.com/in/joao-gabriel-h/"},
         {id: "02", label: "GitHub", icon: FaGithub, link: "https://github.com/JoaoGH"},
         {id: "03", label: "Stack Overflow", icon: FaStackOverflow, link: "https://stackoverflow.com/users/10426962/jo%c3%a3o-g-hartmann"},
-        {id: "04", label: "Leetcode", icon: SiLeetcode, link: ""}
+        {id: "04", label: "Leetcode", icon: SiLeetcode, link: "https://leetcode.com/u/DrZer0/"}
     ],
 
     email: "gabrielhartmannqwert@gmail.com"
 }
 
 export const PROJECTS = [
-    {id: "01", title: "Project 01", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero.", image: PROJECT_IMAGE_1, tags: ["Java"]},
+    {id: "01", title: "Project 01", description: "Lorem ipsum dolor sit amet, consectetur adinpiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero.", image: PROJECT_IMAGE_1, tags: ["Java"]},
     {id: "02", title: "Project 02", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero.", image: PROJECT_IMAGE_2, tags: ["Java"]},
     {id: "03", title: "Project 03", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero.", image: PROJECT_IMAGE_3, tags: ["Java"]},
     {id: "04", title: "Project 04", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero.", image: PROJECT_IMAGE_4, tags: ["Java"]},
