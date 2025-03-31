@@ -3,8 +3,10 @@ import {SKILLS, SKILLS_TAB} from "../../utils/data.js";
 import {Tabs} from "../Tabs/Tabs.jsx";
 import {SkillCard} from "../SkillCard/SkillCard.jsx";
 import {motion} from "framer-motion";
+import {useTranslation} from "react-i18next";
 
 export const TechnicalProficiency = () => {
+    const { t } = useTranslation();
     const [tabData, setTabData] = useState(SKILLS);
     const [activeTab, setActiveTab] = useState("all");
 
@@ -25,16 +27,10 @@ export const TechnicalProficiency = () => {
             <div className="container mx-auto p-10">
                 <div className="w-full lg:w-[60vw] mx-auto">
                     <h4 className="section-title bg-gradient-primary ">
-                        Technical Proficiency
+                        {t("skills.title")}
                     </h4>
                     <p className="text-sm text-center md:text-justify mt-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mollis libero.
-                        Pellentesque eu lorem nulla.
-                        Phasellus maximus, nunc eget malesuada pharetra, sem felis consectetur urna, quis porta lorem nibh a dui.
-                        Duis condimentum magna at malesuada pretium.
-                        Nunc id neque metus.
-                        Vivamus ut nisi pellentesque tortor rhoncus dapibus non in metus.
-                        Etiam ut pellentesque ante.
+                        {t("skills.text")}
                     </p>
                 </div>
 

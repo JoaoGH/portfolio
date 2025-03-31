@@ -1,12 +1,15 @@
 import React from "react";
 import {ABOUT_ME} from "../../utils/data.js";
+import {Trans, useTranslation} from "react-i18next";
 
 export const About = () => {
+    const { t } = useTranslation();
     const PROFILE_PIC = "https://media.licdn.com/dms/image/v2/C4D03AQFcIIPHoaB9Hg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1662072317810?e=1748476800&v=beta&t=wqj64lTJO0oWFSxyea24sxgLwhxKF6nxx5vx1f06UXc";
+
     return (
         <section id="about" className="container mx-auto px-8 py-16">
             <h4 className="block lg:hidden w-[200px] section-title bg-gradient-primary text-left mb-16">
-                About Me
+                {t("about.title")}
             </h4>
 
             <div className="flex flex-col lg:flex-row gap-16 items-start justify-between">
@@ -15,16 +18,22 @@ export const About = () => {
                 </div>
                 <div className="flex-1">
                     <h4 className="hidden lg:block w-[200px] section-title bg-gradient-primary text-left">
-                        About Me
+                        {t("about.title")}
                     </h4>
                     <p className="text-sm text-justify leading-6 whitespace-pre-line mt-4">
-                        {ABOUT_ME.sumary}
+                        <Trans i18nKey="about.text" components={{ 1: <br /> }} />
                     </p>
 
                     <div className="flex gap-4 mt-6">
                         {ABOUT_ME.links.map((item) => {
                             return (
-                                <a key={item.label} className="cursor-pointer group" href={item.link} target="_blank">
+                                <a
+                                    key={item.id}
+                                    className="cursor-pointer group"
+                                    href={item.link}
+                                    target="_blank"
+                                    aria-label={item.label}
+                                >
                                     <item.icon className="text-2xl text-secondary transition-transform duration-300
                                             group-hover:rotate-12 group-hover:scale-110 group-hover:translate-y-[-2px]
                                             group-hover:text-primary" />

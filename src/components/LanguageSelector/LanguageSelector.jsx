@@ -5,7 +5,7 @@ import {useTranslation} from "react-i18next";
 
 export const LanguageSelector = ({mobile = false}) => {
     const [isOpen, setIsOpen] = useState(false);
-    const { i18n} = useTranslation();
+    const { t, i18n} = useTranslation();
 
     // Obter idioma atual
     const currentLanguage = SUPPORTED_LANGUAGES.find(
@@ -45,6 +45,7 @@ export const LanguageSelector = ({mobile = false}) => {
         <div className={`language-selector relative ${mobile ? "md:hidden" : "hidden md:block"}`}>
             <button
                 onClick={toggleDropdown}
+                aria-label={t("navbar.item.language.hint")}
                 className={`
                     flex items-center gap-2 p-2 rounded-full transition-colors ${mobile ? "hover:bg-white/20" : ""}
                     md:text-[14px] font-medium transition-transform duration-300 ease-in-out hover:scale-105`}>

@@ -1,7 +1,9 @@
 import React from "react";
 import {motion} from "framer-motion";
+import {useTranslation} from "react-i18next";
 
 export const Tabs = ({tabList, activeTab, onChange}) => {
+    const { t } = useTranslation();
     const getActiveStyles = (value) => {
         return activeTab === value ? "text-white bg-gradient-primary" : "text-black bg-transparent";
     };
@@ -21,7 +23,9 @@ export const Tabs = ({tabList, activeTab, onChange}) => {
                                 opacity: activeTab === item.value ? 1 : 0.8,
                                 scale: activeTab === item.value ? 1.05 : 1}}
                             transition={{duration: 0.2}}
-                        >{item.label}</motion.button>
+                        >
+                            {t(item.label + ".label")}
+                        </motion.button>
                     );
                 })}
             </div>
