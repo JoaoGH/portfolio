@@ -26,7 +26,13 @@
   "projects.text": "Below you’ll find my experiments and solutions built beyond the corporate environment. Each project here represents an opportunity to apply emerging technologies, test development best practices, and solve real-world problems through innovation.<1/><1/>These works reflect my passion for turning ideas into functional code. All are publicly available for collaboration and study.",
   "projects.button.1.hint": "Previous",
   "projects.button.2.hint": "Next",
-  "default.item.16": "Technical Proficiency",
-  "default.item.17": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mollis libero. Pellentesque eu lorem nulla. Phasellus maximus, nunc eget malesuada pharetra, sem felis consectetur urna, quis porta lorem nibh a dui. Duis condimentum magna at malesuada pretium. Nunc id neque metus. Vivamus ut nisi pellentesque tortor rhoncus dapibus non in metus. Etiam ut pellentesque ante.",
+  "skills.title": "Skills",
+  "skills.text": "My skills are organized by specialty, enabling strategic work across each development layer. Each card details years of experience, implementation complexity, and real-world use cases — and can be filtered by skill type (backend, frontend, etc.) for personalized navigation.",
+  "skills.tabs.item.1.label": "All",
+  "skills.tabs.item.2.label": "Backend",
+  "skills.tabs.item.3.label": "Frontend",
+  "skills.tabs.item.4.label": "Database",
+  "skills.tabs.item.5.label": "Repository",
+  "skills.tabs.item.6.label": "DevOps",
   "default.item.18": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mollis libero. Pellentesque eu lorem nulla. Phasellus maximus, nunc eget malesuada pharetra, sem felis consectetur urna, quis porta lorem nibh a dui. Duis condimentum magna at malesuada pretium. Nunc id neque metus. Vivamus ut nisi pellentesque tortor rhoncus dapibus non in metus. Etiam ut pellentesque ante."
 }

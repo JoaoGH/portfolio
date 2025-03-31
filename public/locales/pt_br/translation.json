@@ -26,7 +26,13 @@
   "projects.text": "Abaixo é possível ver meus experimentos e soluções criadas além do ambiente corporativo. Cada projeto aqui representa uma oportunidade de aplicar tecnologias emergentes, testar boas práticas de desenvolvimento e resolver problemas do mundo real de forma inovadora.<1/><1/>Esses trabalhos refletem minha paixão por transformar ideias em código funcional. Todos estão disponíveis publicamente para colaboração e estudo.",
   "projects.button.1.hint": "Anterior",
   "projects.button.2.hint": "Próximo",
-  "default.item.16": "Proficiências Técnicas",
-  "default.item.17": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mollis libero. Pellentesque eu lorem nulla. Phasellus maximus, nunc eget malesuada pharetra, sem felis consectetur urna, quis porta lorem nibh a dui. Duis condimentum magna at malesuada pretium. Nunc id neque metus. Vivamus ut nisi pellentesque tortor rhoncus dapibus non in metus. Etiam ut pellentesque ante.",
+  "skills.title": "Habilidades",
+  "skills.text": "Minhas competências são organizadas por especialidade, permitindo atuação estratégica em cada camada do desenvolvimento. Cada card detalha anos de experiência, complexidade de implementação e casos de uso real — e podem ser filtradas por tipo de habilidade (backend, frontend, etc.) para uma navegação personalizada.",
+  "skills.tabs.item.1.label": "Todas",
+  "skills.tabs.item.2.label": "Backend",
+  "skills.tabs.item.3.label": "Frontend",
+  "skills.tabs.item.4.label": "Banco de Dados",
+  "skills.tabs.item.5.label": "Repositórios",
+  "skills.tabs.item.6.label": "DevOps",
   "default.item.18": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mollis libero. Pellentesque eu lorem nulla. Phasellus maximus, nunc eget malesuada pharetra, sem felis consectetur urna, quis porta lorem nibh a dui. Duis condimentum magna at malesuada pretium. Nunc id neque metus. Vivamus ut nisi pellentesque tortor rhoncus dapibus non in metus. Etiam ut pellentesque ante."
 }

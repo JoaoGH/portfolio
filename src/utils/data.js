@@ -39,12 +39,12 @@ export const STATS = [
 ]
 
 export const SKILLS_TAB = [
-    {id: "01", label: "All", value: "all"},
-    {id: "02", label: "Backend", value: "backend"},
-    {id: "03", label: "Frontend", value: "frontend"},
-    {id: "04", label: "Database", value: "data"},
-    {id: "05", label: "Repository", value: "repository"},
-    {id: "06", label: "DevOps", value: "devops"}
+    {id: "01", label: "skills.tabs.item.1", value: "all"},
+    {id: "02", label: "skills.tabs.item.2", value: "backend"},
+    {id: "03", label: "skills.tabs.item.3", value: "frontend"},
+    {id: "04", label: "skills.tabs.item.4", value: "data"},
+    {id: "05", label: "skills.tabs.item.5", value: "repository"},
+    {id: "06", label: "skills.tabs.item.6", value: "devops"}
 ]
 export const SKILLS = [
     {id: "01", icon: FaJava, name: "Java", type: "backend", progress: 89, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a arcu eu justo viverra ullamcorper. Aliquam odio lorem, gravida et condimentum in, sodales quis nibh. Sed porta accumsan arcu sit amet commodo."},

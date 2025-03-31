@@ -27,10 +27,10 @@ export const TechnicalProficiency = () => {
             <div className="container mx-auto p-10">
                 <div className="w-full lg:w-[60vw] mx-auto">
                     <h4 className="section-title bg-gradient-primary ">
-                        {t("default.item.16")}
+                        {t("skills.title")}
                     </h4>
                     <p className="text-sm text-center md:text-justify mt-4">
-                        {t("default.item.17")}
+                        {t("skills.text")}
                     </p>
                 </div>
 
