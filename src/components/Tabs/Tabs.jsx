@@ -5,7 +5,9 @@ import {useTranslation} from "react-i18next";
 export const Tabs = ({tabList, activeTab, onChange}) => {
     const { t } = useTranslation();
     const getActiveStyles = (value) => {
-        return activeTab === value ? "text-white bg-gradient-primary" : "text-black bg-transparent";
+        return activeTab === value
+            ? "text-white bg-gradient-primary"
+            : "text-black bg-transparent";
     };
 
     return (
