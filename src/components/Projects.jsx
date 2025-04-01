@@ -66,7 +66,7 @@ export const Projects = () => {
                         </div>
 
                         <button
-                            className={`cursor-pointer arrow-btn -left-5 ${!canScrollPrev ? "opacity-50 cursor-not-allowed" : ""}`}
+                            className={`cursor-pointer arrow-btn -left-7 ${!canScrollPrev ? "opacity-50 cursor-not-allowed" : ""}`}
                             onClick={() => emblaApi && emblaApi.scrollPrev()}
                             disabled={!canScrollPrev}
                             aria-label={t("projects.button.1.hint")}
@@ -75,7 +75,7 @@ export const Projects = () => {
                         </button>
 
                         <button
-                            className={`cursor-pointer arrow-btn -right-5 ${!canScrollNext ? "opacity-50 cursor-not-allowed" : ""}`}
+                            className={`cursor-pointer arrow-btn -right-7 ${!canScrollNext ? "opacity-50 cursor-not-allowed" : ""}`}
                             onClick={() => emblaApi && emblaApi.scrollNext()}
                             disabled={!canScrollNext}
                             aria-label={t("projects.button.2.hint")}
