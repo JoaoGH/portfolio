@@ -3,6 +3,7 @@ import {useTranslation} from "react-i18next";
 
 export const ProjectCard = ({imgUrl, title, description, tags}) => {
     const { t } = useTranslation();
+
     return (
         <div className="h-full bg-white rounded-xl overflow-hidden shadow-md mx-2">
             <img src={imgUrl} alt="Project Image" className="w-full h-72 md:h-80 object-cover"/>
