@@ -20,11 +20,9 @@ export const Contact = () => {
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 md:gap-16 mt-16">
-                        <div>
-                            <ContactInfoCard
-                                icon={<IoMdMail/>}
-                                text={ABOUT_ME.email}/>
-                        </div>
+                        <ContactInfoCard
+                            icon={<IoMdMail/>}
+                            text={ABOUT_ME.email}/>
                     </div>
                 </div>
             </div>
