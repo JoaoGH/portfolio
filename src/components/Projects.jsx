@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect, useState} from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import {PROJECTS} from "../../utils/data.js";
-import {ProjectCard} from "../ProjectCard/ProjectCard.jsx";
+import {PROJECTS} from "../utils/data.js";
+import {ProjectCard} from "./ProjectCard.jsx";
 import {IoIosArrowBack, IoIosArrowForward} from "react-icons/io";
 import {Trans, useTranslation} from "react-i18next";
 

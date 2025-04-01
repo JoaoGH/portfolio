@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {FaChevronDown, FaGlobe} from "react-icons/fa";
-import {SUPPORTED_LANGUAGES} from "../../utils/data.js";
+import {SUPPORTED_LANGUAGES} from "../utils/data.js";
 import {useTranslation} from "react-i18next";
 
 export const LanguageSelector = ({mobile = false}) => {

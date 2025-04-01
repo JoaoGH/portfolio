@@ -1,7 +1,7 @@
 import React from "react";
 import {IoMdMail} from "react-icons/io";
-import {ABOUT_ME} from "../../utils/data.js";
-import {ContactInfoCard} from "../ContactInfoCard/ContactInfoCard.jsx";
+import {ABOUT_ME} from "../utils/data.js";
+import {ContactInfoCard} from "./ContactInfoCard.jsx";
 import {Trans, useTranslation} from "react-i18next";
 
 export const Contact = () => {

@@ -1,9 +1,10 @@
 import React, {useEffect, useState, useRef} from "react";
-import {MENU_LINKS} from "../../utils/data.js";
+import {MENU_LINKS} from "../utils/data.js";
 import {Link} from "react-scroll";
 import {FaCode} from "react-icons/fa";
-import {LanguageSelector} from "../LanguageSelector/LanguageSelector.jsx";
+import {LanguageSelector} from "./LanguageSelector.jsx";
 import {useTranslation} from "react-i18next";
+import {DarkModeToggle} from "./DarkModeToggle.jsx";
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -95,6 +96,7 @@ export const Navbar = () => {
 
                         {/* Botão Mobile */}
                         <div className="flex md:hidden items-center gap-3">
+                            <DarkModeToggle />
                             <LanguageSelector mobile={true}/>
                             <button
                                 onClick={toggleMenu}

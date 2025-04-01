@@ -1,6 +1,6 @@
 import React from "react";
-import {STATS} from "../../utils/data.js";
-import {StatInfoCard} from "../StatInfoCard/StatInfoCard.jsx";
+import {STATS} from "../utils/data.js";
+import {StatInfoCard} from "./StatInfoCard.jsx";
 import {useTranslation} from "react-i18next";
 import {ParticleText} from "./ParticleText.jsx";
 

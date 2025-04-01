@@ -1,5 +1,5 @@
 import React from "react";
-import {ABOUT_ME} from "../../utils/data.js";
+import {ABOUT_ME} from "../utils/data.js";
 import {Trans, useTranslation} from "react-i18next";
 
 export const About = () => {

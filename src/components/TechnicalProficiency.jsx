@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import {SKILLS, SKILLS_TAB} from "../../utils/data.js";
-import {Tabs} from "../Tabs/Tabs.jsx";
-import {SkillCard} from "../SkillCard/SkillCard.jsx";
+import {SKILLS, SKILLS_TAB} from "../utils/data.js";
+import {Tabs} from "./Tabs.jsx";
+import {SkillCard} from "./SkillCard.jsx";
 import {motion} from "framer-motion";
 import {useTranslation} from "react-i18next";
 
