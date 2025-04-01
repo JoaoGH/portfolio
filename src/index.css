@@ -9,7 +9,7 @@
 @theme {
     --color-primary: #9403fc;
     --color-secondary: #7470f0;
-    --color-tertiary: #b57bdb;
+    --color-accent: #b57bdb;
 }
 
 @layer components {
