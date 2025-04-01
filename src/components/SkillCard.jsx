@@ -4,8 +4,9 @@ export const SkillCard = ({icon, name, description, progress}) => {
     return (
         <div className="bg-white rounded-2xl p-4">
             <div className="flex gap-3">
-                <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-b from-[#db9cdb] to-[#ffffff]
-                                rounded-[7px]">{icon}</div>
+                <div className="w-10 h-10 flex items-center justify-center bg-gradient-skill rounded-[7px]">
+                    {icon}
+                </div>
                 <div className="flex-1">
                     <div className="flex items-center justify-between">
                         <p className="text-[13px] text-black font-medium">{name}</p>

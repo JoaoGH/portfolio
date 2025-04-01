@@ -4,12 +4,16 @@
     .bg-gradient-primary {
         background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
     }
+    .bg-gradient-skill {
+        background-image: linear-gradient(to bottom, var(--color-skill), var(--color-white));
+    }
 }
 
 @theme {
     --color-primary: #9403fc;
     --color-secondary: #7470f0;
     --color-accent: #b57bdb;
+    --color-skill: #db9cdb;
 }
 
 @layer components {
