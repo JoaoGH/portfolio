@@ -7,6 +7,9 @@
     .bg-gradient-skill {
         background-image: linear-gradient(to bottom, var(--color-skill), var(--color-white));
     }
+    .bg-gradient-stats {
+        background-image: linear-gradient(to bottom, var(--color-accent), var(--color-white));
+    }
 }
 
 @theme {
