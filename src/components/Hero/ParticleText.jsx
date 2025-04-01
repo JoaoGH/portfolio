@@ -28,7 +28,7 @@ export const ParticleText = ({text = "< / >", defaultMode = 'day'}) => {
 
         // Configurações
         const fontSettings = {
-            size: 120,
+            size: 110,
             family: 'Arial',
             weight: 'bold'
         };
@@ -89,7 +89,7 @@ export const ParticleText = ({text = "< / >", defaultMode = 'day'}) => {
                             originalX: targetX,
                             originalY: targetY,
                             speed: Math.random() * 0.06 + 0.02,
-                            size: Math.random() * 2 + 1,
+                            size: Math.random() * Math.PI + 1,
                             color: colors[mode].particles[
                                 Math.floor(Math.random() * colors[mode].particles.length)
                                 ],

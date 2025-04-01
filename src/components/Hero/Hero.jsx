@@ -5,7 +5,7 @@ import {useTranslation} from "react-i18next";
 import {ParticleText} from "./ParticleText.jsx";
 
 export const Hero = () => {
-    const { t, i18n } = useTranslation();
+    const {t, i18n} = useTranslation();
 
     const handleDownload = () => {
         const link = document.createElement('a');
@@ -20,39 +20,43 @@ export const Hero = () => {
     }
 
     return (
-        <section id="hero" className="container mx-auto px-8">
-            <div className="flex flex-col lg:flex-row gap-14 items-center justify-between mt-[80px]">
-                <div className="order-2 lg:order-1 text-center lg:text-left mt-16 lg:mt-0">
-                    <h3 className="text-xl lg:text-2xl font-medium text-black">{t("hero.item.1.label")}</h3>
-                    <h1 className="w-full lg:w-[480px] text-4xl lg:text-5xl font-bold leading-[50px] lg:leading-[60px]
+        <section id="hero" className="bg-background">
+            <div className="container mx-auto px-15 py-12 md:py-16">
+                <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
+                    <div className="order-2 lg:order-1 text-center lg:text-left">
+                        <h3 className="text-xl lg:text-2xl font-medium text-black">{t("hero.item.1.label")}</h3>
+                        <h1 className="w-full lg:w-[480px] text-4xl lg:text-5xl font-bold leading-[50px] lg:leading-[60px]
                                     mt-3 bg-gradient-primary bg-clip-text text-transparent">
-                        {t("hero.title")}
-                    </h1>
-                    <p className="w-full lg:w-[500px] text-sm lg:text-base mt-4">
-                        {t("hero.item.2.label")}
-                    </p>
+                            {t("hero.title")}
+                        </h1>
+                        <p className="w-full lg:w-[500px] text-sm lg:text-base mt-4">
+                            {t("hero.item.2.label")}
+                        </p>
 
-                    <div className="flex justify-center lg:justify-start gap-4 md:gap-8 mt-6">
-                        <button
-                            onClick={handleDownload}
-                            aria-label={t("hero.button.2.hint")}
-                            className="flex-1 md:flex-none action-btn btn-scale-anim bg-gradient-primary">
-                            {t("hero.button.2.text")}
-                        </button>
+                        <div className="flex justify-center lg:justify-start gap-4 md:gap-8 mt-6">
+                            <button
+                                onClick={handleDownload}
+                                aria-label={t("hero.button.2.hint")}
+                                className="flex-1 md:flex-none action-btn btn-scale-anim bg-gradient-primary"
+                            >
+                                {t("hero.button.2.text")}
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        className="order-1 lg:order-2">
+                        <ParticleText text="< / >"/>
                     </div>
                 </div>
 
-                <div className="w-[300px] md:w-[370px] h-[310px] md:h-[380px] relative order-1 lg:order-2 transform">
-                    <ParticleText text="< / >"/>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 md:mt-16">
+                    {STATS.map((item) => {
+                        return (
+                            <StatInfoCard key={item.id} count={item.count} label={item.label}/>
+                        );
+                    })}
                 </div>
-            </div>
-
-            <div className="flex gap-12 mt-16 md:mt-24 flex-wrap">
-                {STATS.map((item) => {
-                    return (
-                        <StatInfoCard key={item.id} count={item.count} label={item.label}/>
-                    );
-                })}
             </div>
         </section>
     )
