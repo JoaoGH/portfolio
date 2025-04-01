@@ -3,8 +3,7 @@ import {ABOUT_ME} from "../../utils/data.js";
 import {Trans, useTranslation} from "react-i18next";
 
 export const About = () => {
-    const { t } = useTranslation();
-    const PROFILE_PIC = "https://media.licdn.com/dms/image/v2/C4D03AQFcIIPHoaB9Hg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1662072317810?e=1748476800&v=beta&t=wqj64lTJO0oWFSxyea24sxgLwhxKF6nxx5vx1f06UXc";
+    const {t} = useTranslation();
 
     return (
         <section id="about" className="container mx-auto px-8 py-16">
@@ -13,15 +12,12 @@ export const About = () => {
             </h4>
 
             <div className="flex flex-col lg:flex-row gap-16 items-start justify-between">
-                <div className="w-[300px] md:w-[370px] h-[310px] md:h-[380px] bg-purple-600/75 rounded-3xl mx-auto">
-                    <img src={PROFILE_PIC} alt="Profile Pic" className="profile-pic"/>
-                </div>
                 <div className="flex-1">
                     <h4 className="hidden lg:block w-[200px] section-title bg-gradient-primary text-left">
                         {t("about.title")}
                     </h4>
                     <p className="text-sm text-justify leading-6 whitespace-pre-line mt-4">
-                        <Trans i18nKey="about.text" components={{ 1: <br /> }} />
+                        <Trans i18nKey="about.text" components={{1: <br/>}}/>
                     </p>
 
                     <div className="flex gap-4 mt-6">
@@ -36,7 +32,7 @@ export const About = () => {
                                 >
                                     <item.icon className="text-2xl text-secondary transition-transform duration-300
                                             group-hover:rotate-12 group-hover:scale-110 group-hover:translate-y-[-2px]
-                                            group-hover:text-primary" />
+                                            group-hover:text-primary"/>
                                 </a>
                             );
                         })}
