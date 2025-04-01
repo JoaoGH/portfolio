@@ -17,7 +17,9 @@ export const ContactInfoCard = ({icon, text}) => {
             </div>
 
             <a {...linkProps}>
-                <p className="text-secondary text-xs md:text-sm">{text}</p>
+                <p className="text-secondary text-xs md:text-sm">
+                    {text}
+                </p>
             </a>
         </div>
     );
