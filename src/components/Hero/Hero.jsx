@@ -2,10 +2,10 @@ import React from "react";
 import {STATS} from "../../utils/data.js";
 import {StatInfoCard} from "../StatInfoCard/StatInfoCard.jsx";
 import {useTranslation} from "react-i18next";
+import {ParticleText} from "./ParticleText.jsx";
 
 export const Hero = () => {
     const { t, i18n } = useTranslation();
-    const PROFILE_PIC = "https://as1.ftcdn.net/v2/jpg/05/16/27/58/1000_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg";
 
     const handleDownload = () => {
         const link = document.createElement('a');
@@ -42,9 +42,8 @@ export const Hero = () => {
                     </div>
                 </div>
 
-                <div className="w-[300px] md:w-[370px] h-[310px] md:h-[380px] bg-purple-600/75 rounded-3xl relative order-1
-                                lg:order-2">
-                    <img src={PROFILE_PIC} alt="Profile Pic" className="profile-pic" />
+                <div className="w-[300px] md:w-[370px] h-[310px] md:h-[380px] relative order-1 lg:order-2 transform">
+                    <ParticleText text="< / >"/>
                 </div>
             </div>
 
