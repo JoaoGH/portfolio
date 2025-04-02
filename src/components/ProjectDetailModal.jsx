@@ -29,7 +29,11 @@ export const ProjectDetailsModal = ({project, onClose}) => {
                     });
 
                 if (projectImages.length > 0) {
-                    setImages([project.image, ...projectImages]);
+                    let imagesToShow = [project.image];
+                    if (!projectImages.includes(project.image)) {
+                        imagesToShow = [imagesToShow].concat(projectImages);
+                    }
+                    setImages(imagesToShow);
                 }
             } catch (error) {
                 console.error("Error loading additional images:", error);
