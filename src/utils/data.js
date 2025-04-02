@@ -46,12 +46,12 @@ export const STATS = [
 ]
 
 export const SKILLS_TAB = [
-    {id: "01", label: "skills.tabs.item.1", value: "all"},
-    {id: "02", label: "skills.tabs.item.2", value: "backend"},
-    {id: "03", label: "skills.tabs.item.3", value: "frontend"},
-    {id: "04", label: "skills.tabs.item.4", value: "data"},
-    {id: "05", label: "skills.tabs.item.5", value: "repository"},
-    {id: "06", label: "skills.tabs.item.6", value: "devops"}
+    {id: 1, label: "skills.tabs.item.1", value: "all"},
+    {id: 2, label: "skills.tabs.item.2", value: "backend"},
+    {id: 3, label: "skills.tabs.item.3", value: "frontend"},
+    {id: 4, label: "skills.tabs.item.4", value: "data"},
+    {id: 5, label: "skills.tabs.item.5", value: "repository"},
+    {id: 6, label: "skills.tabs.item.6", value: "devops"}
 ]
 export const SKILLS = [
     {id: 1, icon: FaJava, name: "Java", type: "backend", progress: 80, description: "skills.java.text"},
@@ -79,10 +79,11 @@ export const SKILLS = [
 
 export const ABOUT_ME = {
     links: [
-        {id: "01", label: "LinkedIn", icon: FaLinkedin, link: "https://www.linkedin.com/in/joao-gabriel-h/"},
-        {id: "02", label: "GitHub", icon: FaGithub, link: "https://github.com/JoaoGH"},
-        {id: "03", label: "Stack Overflow", icon: FaStackOverflow, link: "https://stackoverflow.com/users/10426962/jo%c3%a3o-g-hartmann"},
-        {id: "04", label: "Leetcode", icon: SiLeetcode, link: "https://leetcode.com/u/DrZer0/"}
+        {id: 1, label: "LinkedIn", icon: FaLinkedin, link: "https://www.linkedin.com/in/joao-gabriel-h/"},
+        {id: 2, label: "GitHub", icon: FaGithub, link: "https://github.com/JoaoGH"},
+        {id: 3, label: "Stack Overflow", icon: FaStackOverflow, link: "https://stackoverflow.com/users/10426962/joao-g-hartmann"},
+        {id: 4, label: "Stack Overflow em Português", icon: FaStackOverflow, link: "https://pt.stackoverflow.com/users/126507/joao-g-hartmann"},
+        {id: 5, label: "Leetcode", icon: SiLeetcode, link: "https://leetcode.com/u/DrZer0/"}
     ],
 
     email: "gabrielhartmannqwert@gmail.com"
