@@ -21,7 +21,7 @@ export const ProjectCard = ({imgUrl, title, description, tags, onClick}) => {
                                 key={id}
                                 className="text-xs text-secondary bg-purple-100 px-3 py-1 rounded"
                             >
-                                {tags}
+                                {tag}
                             </span>
                         );
                     })}
