@@ -61,7 +61,7 @@ export const ProjectDetailsModal = ({project, onClose}) => {
         handleScroll();
 
         return () => emblaApi.off('select', handleScroll);
-    }, [emblaApi]);
+    }, [emblaApi, handleScroll]);
 
     return (
         <div
