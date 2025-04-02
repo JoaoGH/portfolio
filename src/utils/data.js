@@ -13,15 +13,10 @@ import {
     FaStackOverflow,
     FaReact
 } from "react-icons/fa";
-import {
-    TbBrandCpp
-} from "react-icons/tb"
-import {
-    SiPostgresql, SiOracle, SiGradle, SiRabbitmq, SiLeetcode, SiSpringboot, SiTailwindcss
-} from "react-icons/si"
-import {
-    GiTortoise,
-} from "react-icons/gi"
+import {TbBrandCpp} from "react-icons/tb"
+import {SiPostgresql, SiOracle, SiGradle, SiRabbitmq, SiLeetcode, SiSpringboot, SiTailwindcss} from "react-icons/si"
+import {GiTortoise} from "react-icons/gi"
+import {DiGrails} from "react-icons/di";
 
 import PROJECT_IMAGE_1 from "../assets/images/project.png"
 import PROJECT_IMAGE_2 from "../assets/images/project.png"
@@ -29,7 +24,6 @@ import PROJECT_IMAGE_3 from "../assets/images/project.png"
 import PROJECT_IMAGE_4 from "../assets/images/project.png"
 import PROJECT_IMAGE_5 from "../assets/images/project.png"
 import PROJECT_IMAGE_6 from "../assets/images/project.png"
-import {DiGrails} from "react-icons/di";
 
 export const SUPPORTED_LANGUAGES = [
     {code: "en", name: "English", country_code: "us"},
