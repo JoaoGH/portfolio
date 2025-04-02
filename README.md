@@ -1,12 +1,47 @@
-# React + Vite
+# Portfólio Profissional
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+  <img src="public/icon.svg" alt="Logo" width="200"/>
+</div>
 
-Currently, two official plugins are available:
+## Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Portfólio moderno e responsivo para exibir meus projetos, habilidades e experiência profissional.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Principais Tecnologias
+- **React 19** - Biblioteca JavaScript para construção de interfaces
+- **Vite 6.2.4** - Ferramenta de construção extremamente rápida
+- **Tailwind CSS v4** - Framework CSS utility-first
+- **Node.js 22.14.0** - Ambiente de execução JavaScript
+
+### Bibliotecas Principais
+| Tecnologia | Finalidade |
+|------------|------------|
+| Framer Motion 12.5 | Animações avançadas |
+| React I18next 15.4 | Internacionalização |
+| Embla Carousel 8.5 | Carrosséis com touch |
+| React Scroll 1.9 | Rolagem suave |
+| React Icons 5.5 | Biblioteca de ícones |
+
+## How to Run Locally / Como Executar Localmente
+
+1. Clone o repositório:
+   ```bash
+   git clone git@github.com:JoaoGH/portfolio.git
+   ````
+2. Instale dependências:
+   ```bash
+   npm install
+   ````
+3. Execute servidor:
+   ```bash
+   npm run dev
+   ````
+4. Abra no navegador:
+   ```bash
+   http://localhost:5173
+   ````
+
+
