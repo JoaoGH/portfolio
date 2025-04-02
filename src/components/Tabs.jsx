@@ -4,27 +4,40 @@ import {useTranslation} from "react-i18next";
 
 export const Tabs = ({tabList, activeTab, onChange}) => {
     const { t } = useTranslation();
+
     const getActiveStyles = (value) => {
         return activeTab === value
-            ? "text-white bg-gradient-primary"
-            : "text-black bg-transparent";
+            ? "text-white bg-gradient-primary shadow-sm font-medium"
+            : "text-gray-700 bg-gray-200 hover:bg-gray-200";
     };
 
     return (
-        <div className="flex items-center justify-center my-10">
-            <div className="bg-[var(--color-accent)] rounded-full flex">
+        <div className="w-full">
+            {/* Mobile: grid duas colunas*/}
+            <div className="md:hidden grid grid-cols-2 sm:grid-cols-3 gap-2">
+                {tabList.map((item) => (
+                    <motion.button
+                        key={item.id}
+                        className={`w-full text-xs sm:text-sm px-3 py-2 rounded-lg transition-all duration-200
+                                    ${getActiveStyles(item.value)}`}
+                        onClick={() => onChange(item.value)}
+                        whileTap={{ scale: 0.98 }}
+                    >
+                        {t(item.label + ".label")}
+                    </motion.button>
+                ))}
+            </div>
+
+            {/* Desktop: Tabs com quebra de linha se necessário */}
+            <div className="hidden md:flex flex-wrap gap-2 justify-center">
                 {tabList.map((item) => {
                     return (
                         <motion.button
                             key={item.id}
-                            className={`text-xs md:text-[15px] ${getActiveStyles(item.value)} rounded-full px-4 md:px-10 
-                                        py-[6px] md:py-3`}
+                            className={`flex-shrink-0 text-sm px-4 py-2 rounded-lg transition-all duration-200
+                                        ${getActiveStyles(item.value)}`}
                             onClick={() => onChange(item.value)}
-                            initial={{opacity: 0.8, scale: 1}}
-                            animate={{
-                                opacity: activeTab === item.value ? 1 : 0.8,
-                                scale: activeTab === item.value ? 1.05 : 1}}
-                            transition={{duration: 0.2}}
+                            whileHover={{scale: 1.03}}
                         >
                             {t(item.label + ".label")}
                         </motion.button>
@@ -33,4 +46,4 @@ export const Tabs = ({tabList, activeTab, onChange}) => {
             </div>
         </div>
     );
-}
+};
