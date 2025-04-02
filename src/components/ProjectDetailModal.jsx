@@ -69,8 +69,10 @@ export const ProjectDetailsModal = ({project, onClose}) => {
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Header */}
-                <div className="sticky top-0 bg-white border-b flex justify-between items-center p-4 z-10">
-                    <h3 className="text-xl font-bold">{t(project.title)}</h3>
+                <div className="sticky top-0 bg-white border-b border-purple-300 flex justify-between items-center p-4 z-10">
+                    <h3 className="text-xl font-bold">
+                        {t(project.title)}
+                    </h3>
                     <button
                         onClick={onClose}
                         className="cursor-pointer text-gray-500 hover:text-gray-700 transition-colors"
@@ -192,8 +194,10 @@ export const ProjectDetailsModal = ({project, onClose}) => {
                     </div>
 
                     {/* Tags na parte inferior */}
-                    <div className="mt-8 pt-4 border-t">
-                        <h4 className="font-semibold mb-2">{t("projects.modal.technologies.label")}</h4>
+                    <div className="mt-8 pt-4 border-t border-purple-300">
+                        <h4 className="font-semibold mb-2">
+                            {t("projects.modal.technologies.label")}
+                        </h4>
                         <div className="flex flex-wrap gap-2">
                             {project.tags.map((tag, index) => (
                                 <span
