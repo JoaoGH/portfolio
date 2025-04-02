@@ -4,13 +4,14 @@ import {PROJECTS} from "../utils/data.js";
 import {ProjectCard} from "./ProjectCard.jsx";
 import {IoIosArrowBack, IoIosArrowForward} from "react-icons/io";
 import {Trans, useTranslation} from "react-i18next";
-
+import {ProjectDetailsModal} from "./ProjectDetailModal.jsx";
 
 export const Projects = () => {
     const {t} = useTranslation();
     const [emblaRef, emblaApi] = useEmblaCarousel({loop: true, align: "start"});
     const [canScrollPrev, setCanScrollPrev] = useState(false);
     const [canScrollNext, setCanScrollNext] = useState(false);
+    const [selectedProject, setSelectedProject] = useState(null);
 
     const updateScrollButtons = useCallback(() => {
         if (!emblaApi) {
@@ -30,6 +31,16 @@ export const Projects = () => {
         emblaApi.on("select", updateScrollButtons);
         updateScrollButtons();
     }, [emblaApi, updateScrollButtons]);
+
+    const openProjectDetails = (project) => {
+        setSelectedProject(project);
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        setSelectedProject(null);
+        document.body.style.overflow = 'auto';
+    };
 
     return (
         <section id="projects" className="bg-background">
@@ -58,6 +69,7 @@ export const Projects = () => {
                                                 title={project.title}
                                                 description={project.description}
                                                 tags={project.tags}
+                                                onClick={() => openProjectDetails(project)}
                                             />
                                         </div>
                                     );
@@ -86,7 +98,14 @@ export const Projects = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Modal de Detalhes */}
+            {selectedProject && (
+                <ProjectDetailsModal
+                    project={selectedProject}
+                    onClose={closeModal}
+                />
+            )}
         </section>
     );
-}
-
+};

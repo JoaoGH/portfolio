@@ -77,10 +77,29 @@ export const ABOUT_ME = {
 }
 
 export const PROJECTS = [
-    {id: "01", title: "Project 01", description: "Lorem ipsum dolor sit amet, consectetur adinpiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero.", image: PROJECT_IMAGE_1, tags: ["Java"]},
-    {id: "02", title: "Project 02", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero.", image: PROJECT_IMAGE_2, tags: ["Java"]},
-    {id: "03", title: "Project 03", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero.", image: PROJECT_IMAGE_3, tags: ["Java"]},
-    {id: "04", title: "Project 04", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero.", image: PROJECT_IMAGE_4, tags: ["Java"]},
-    {id: "05", title: "Project 05", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero.", image: PROJECT_IMAGE_5, tags: ["Java"]},
-    {id: "06", title: "Project 06", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero.", image: PROJECT_IMAGE_6, tags: ["Java"]},
+    {
+        id: 1, title: "Project 01", image: PROJECT_IMAGE_1, tags: ["Java"],
+        description: "Lorem ipsum dolor sit amet, consectetur adinpiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero.",
+        details: {
+            fullDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum, orci et tempor finibus, urna ipsum luctus sapien, at molestie lorem velit eget massa. Vestibulum lobortis nisl ac lobortis commodo. Nullam id malesuada urna, faucibus lacinia turpis. Quisque tempor tincidunt sodales. Nullam sed cursus orci. Nam semper orci a urna tempus fringilla. Nam augue sem, euismod eget rhoncus at, cursus eget erat. Vestibulum at nunc ornare, fringilla libero vitae, scelerisque sapien. Nullam porta finibus erat, at condimentum purus imperdiet ac. In convallis faucibus odio, non varius tortor efficitur eget.",
+            features: ["feat 1", "feat 2"],
+            demoUrl: "http://google.com",
+            codeUrl: "http://google.com",
+        }
+    }, {
+        id: 2, title: "Project 02", image: PROJECT_IMAGE_2, tags: ["Java"],
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero."
+    }, {
+        id: 3, title: "Project 03", image: PROJECT_IMAGE_3, tags: ["Java"],
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero."
+    }, {
+        id: 4, title: "Project 04", image: PROJECT_IMAGE_4, tags: ["Java"],
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero."
+    }, {
+        id: 5, title: "Project 05", image: PROJECT_IMAGE_5, tags: ["Java"],
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero."
+    }, {
+        id: 6, title: "Project 06", image: PROJECT_IMAGE_6, tags: ["Java"],
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero."
+    },
 ]
