@@ -6,7 +6,7 @@ export const ParticleText = ({text = "< / >", defaultMode = 'day'}) => {
     const canvasRef = useRef(null);
     const particlesRef = useRef([]);
     const originalPositionsRef = useRef([]);
-    const [mode, setMode] = useState(defaultMode);
+    const [mode] = useState(defaultMode);
 
     // Cores para os modos
     const colors = {
@@ -167,7 +167,7 @@ export const ParticleText = ({text = "< / >", defaultMode = 'day'}) => {
         return () => {
             window.removeEventListener('resize', resizeCanvas);
         };
-    }, [text, mode]);
+    }, [text, mode, colors]);
 
     return (
         <div className="relative">
