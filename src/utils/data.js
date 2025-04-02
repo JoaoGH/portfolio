@@ -78,7 +78,7 @@ export const ABOUT_ME = {
         {id: 1, label: "LinkedIn", icon: FaLinkedin, link: "https://www.linkedin.com/in/joao-gabriel-h/"},
         {id: 2, label: "GitHub", icon: FaGithub, link: "https://github.com/JoaoGH"},
         {id: 3, label: "Stack Overflow", icon: FaStackOverflow, link: "https://stackoverflow.com/users/10426962/joao-g-hartmann"},
-        {id: 4, label: "Stack Overflow em Português", icon: FaStackOverflow, link: "https://pt.stackoverflow.com/users/126507/joao-g-hartmann"},
+        {id: 4, label: "Stack Overflow em Português", flag: "PT", icon: FaStackOverflow, link: "https://pt.stackoverflow.com/users/126507/joao-g-hartmann"},
         {id: 5, label: "Leetcode", icon: SiLeetcode, link: "https://leetcode.com/u/DrZer0/"}
     ],
 
