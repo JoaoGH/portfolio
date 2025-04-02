@@ -53,7 +53,7 @@ export const TechnicalProficiency = () => {
                                         <SkillCard
                                             icon={<skill.icon className="w-6 h-6 text-primary"/>}
                                             name={skill.name}
-                                            description={skill.description}
+                                            description={t(skill.description)}
                                             progress={skill.progress}
                                         />
                                     </motion.div>
