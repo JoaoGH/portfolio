@@ -31,6 +31,12 @@ export const About = () => {
                                         <item.icon className="text-2xl text-secondary transition-transform duration-300
                                             group-hover:rotate-12 group-hover:scale-110 group-hover:translate-y-[-2px]
                                             group-hover:text-primary"/>
+                                        {item.flag && (
+                                            <span className="absolute -mt-7 text-[9px] font-medium text-secondary
+                                                            transition-all duration-300 group-hover:text-primary">
+                                                {item.flag}
+                                            </span>
+                                        )}
                                     </a>
                                 );
                             })}

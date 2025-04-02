@@ -77,6 +77,7 @@
   "projects.johnswalletmsg.features.2.label": "Notificação via SMS",
   "skills.title": "Habilidades",
   "skills.text": "Minhas competências são organizadas por especialidade, permitindo atuação estratégica em cada camada do desenvolvimento. Cada card detalha anos de experiência, complexidade de implementação e casos de uso real — e podem ser filtradas por tipo de habilidade (backend, frontend, etc.) para uma navegação personalizada.",
+  "skill.button.showless.text": "Mostrar menos",
   "skills.tabs.item.1.label": "Todas",
   "skills.tabs.item.2.label": "Backend",
   "skills.tabs.item.3.label": "Frontend",
