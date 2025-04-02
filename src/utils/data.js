@@ -18,12 +18,8 @@ import {SiPostgresql, SiOracle, SiGradle, SiRabbitmq, SiLeetcode, SiSpringboot, 
 import {GiTortoise} from "react-icons/gi"
 import {DiGrails} from "react-icons/di";
 
-import PROJECT_IMAGE_1 from "../assets/images/project.png"
-import PROJECT_IMAGE_2 from "../assets/images/project.png"
-import PROJECT_IMAGE_3 from "../assets/images/project.png"
-import PROJECT_IMAGE_4 from "../assets/images/project.png"
-import PROJECT_IMAGE_5 from "../assets/images/project.png"
-import PROJECT_IMAGE_6 from "../assets/images/project.png"
+import PROJECT_IMAGE_1 from "../assets/images/project-01/main.png"
+import PROJECT_DEFAULT_IMAGE from "../assets/images/project.png"
 
 export const SUPPORTED_LANGUAGES = [
     {code: "en", name: "English", country_code: "us"},
@@ -91,28 +87,105 @@ export const ABOUT_ME = {
 
 export const PROJECTS = [
     {
-        id: 1, title: "Project 01", image: PROJECT_IMAGE_1, tags: ["Java"],
-        description: "Lorem ipsum dolor sit amet, consectetur adinpiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero.",
+        id: 1, title: "Retro Code", image: PROJECT_IMAGE_1,
+        tags: ["C++", "PHP", "Java", "Javascript", "HTML", "CSS", "SQL", "Legacy"],
+        description: "projects.retrocode.description",
         details: {
-            fullDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum, orci et tempor finibus, urna ipsum luctus sapien, at molestie lorem velit eget massa. Vestibulum lobortis nisl ac lobortis commodo. Nullam id malesuada urna, faucibus lacinia turpis. Quisque tempor tincidunt sodales. Nullam sed cursus orci. Nam semper orci a urna tempus fringilla. Nam augue sem, euismod eget rhoncus at, cursus eget erat. Vestibulum at nunc ornare, fringilla libero vitae, scelerisque sapien. Nullam porta finibus erat, at condimentum purus imperdiet ac. In convallis faucibus odio, non varius tortor efficitur eget.",
-            features: ["feat 1", "feat 2"],
-            demoUrl: "http://google.com",
-            codeUrl: "http://google.com",
+            fullDescription: "projects.retrocode.text",
+            features: [
+                "projects.retrocode.feat.1.label",
+                "projects.retrocode.feat.2.label",
+                "projects.retrocode.feat.3.label"
+            ],
+            codeUrl: "https://github.com/JoaoGH/retro-code",
+            demoUrl: null,
         }
     }, {
-        id: 2, title: "Project 02", image: PROJECT_IMAGE_2, tags: ["Java"],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero."
+        id: 2, title: "Stories Video Maker", image: PROJECT_DEFAULT_IMAGE,
+        tags: ["Grails", "Python 3", "FFmpeg", "Automation", "OpenCV"],
+        description: "projects.storiesmaker.description",
+        details: {
+            fullDescription: "projects.storiesmaker.text",
+            features: [
+                "projects.storiesmaker.features.1.label",
+                "projects.storiesmaker.features.2.label",
+                "projects.storiesmaker.features.3.label",
+                "projects.storiesmaker.features.4.label"
+            ],
+            codeUrl: "https://github.com/JoaoGH/stories-video-maker",
+            demoUrl: null
+        }
     }, {
-        id: 3, title: "Project 03", image: PROJECT_IMAGE_3, tags: ["Java"],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero."
+        id: 3, title: "projects.pln.title", image: PROJECT_DEFAULT_IMAGE,
+        tags: ["Python", "NLP", "Machine Learning", "NLTK", "Pandas"],
+        description: "projects.pln.description",
+        details: {
+            fullDescription: "projects.pln.text",
+            features: [
+                "projects.pln.features.1.label",
+                "projects.pln.features.2.label",
+                "projects.pln.features.3.label",
+                "projects.pln.features.4.label",
+                "projects.pln.features.5.label",
+                "projects.pln.features.6.label"
+            ],
+            codeUrl: "https://github.com/JoaoGH/topicos-especiais-pln",
+            demoUrl: null
+        }
     }, {
-        id: 4, title: "Project 04", image: PROJECT_IMAGE_4, tags: ["Java"],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero."
+        id: 4, title: "projects.cve.title", image: PROJECT_DEFAULT_IMAGE,
+        tags: ["Python", "CVSS", "CVE"],
+        description: "projects.cve.description",
+        details: {
+            fullDescription: "projects.cve.text",
+            features: [
+                "projects.cve.features.1.label",
+                "projects.cve.features.2.label",
+                "projects.cve.features.3.label",
+                "projects.cve.features.4.label"
+            ],
+            codeUrl: "https://github.com/JoaoGH/cve-cvss-identifier",
+            demoUrl: null
+        }
     }, {
-        id: 5, title: "Project 05", image: PROJECT_IMAGE_5, tags: ["Java"],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero."
+        id: 5, title: "projects.certverify.title", image: PROJECT_DEFAULT_IMAGE,
+        tags: ["Python", "PKI", "X.509"],
+        description: "projects.certverify.description",
+        details: {
+            fullDescription: "projects.certverify.text",
+            features: [
+                "projects.certverify.features.1.label",
+                "projects.certverify.features.2.label",
+                "projects.certverify.features.3.label",
+                "projects.certverify.features.4.label"
+            ],
+            codeUrl: "https://github.com/JoaoGH/verify-digital-cert",
+            demoUrl: null
+        }
     }, {
-        id: 6, title: "Project 06", image: PROJECT_IMAGE_6, tags: ["Java"],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue dignissim, faucibus arcu aliquam, egestas libero."
+        id: 6, title: "John's Wallet", image: PROJECT_DEFAULT_IMAGE,
+        tags: ["Java", "Springboot"],
+        description: "projects.johnswallet.description",
+        details: {
+            fullDescription: "projects.johnswallet.text",
+            features: [
+                "projects.johnswallet.features.1.label"
+            ],
+            codeUrl: "https://github.com/JoaoGH/John-s-Wallet",
+            demoUrl: null
+        }
+    }, {
+        id: 7, title: "John's Wallet Messaging", image: PROJECT_DEFAULT_IMAGE,
+        tags: ["Java", "Springboot", "RabbitMQ"],
+        description: "projects.johnswalletmsg.description",
+        details: {
+            fullDescription: "projects.johnswalletmsg.text",
+            features: [
+                "projects.johnswalletmsg.features.1.label",
+                "projects.johnswalletmsg.features.2.label"
+            ],
+            codeUrl: "https://github.com/JoaoGH/John-s-Wallet",
+            demoUrl: null
+        }
     },
 ]
