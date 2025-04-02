@@ -23,20 +23,21 @@ export const ProjectDetailsModal = ({project, onClose}) => {
                 );
 
                 const projectImages = Object.entries(imageModules)
-                    .filter(([path]) => path.includes(`project-${projectId}/`))
-                    .map(([path]) => {
-                        return path.replace('../assets', '/src/assets');
-                    });
+                    .filter((path) => path.includes(`project-${projectId}/`))
+                    .map((path) => path);
 
+                let imagesToShow = [project.image];
                 if (projectImages.length > 0) {
-                    let imagesToShow = [project.image];
                     if (!projectImages.includes(project.image)) {
                         imagesToShow = [imagesToShow].concat(projectImages);
                     }
                     setImages(imagesToShow);
+                } else {
+                    setImages(imagesToShow);
                 }
             } catch (error) {
                 console.error("Error loading additional images:", error);
+                setImages([project.image]);
             }
         };
 
