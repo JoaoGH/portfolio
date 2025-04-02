@@ -27,18 +27,18 @@ export const SUPPORTED_LANGUAGES = [
 ]
 
 export const MENU_LINKS = [
-    {id: "01", label: "navbar.item.1", offset: -100, to: "hero"},
-    {id: "02", label: "navbar.item.2", offset: -80, to: "projects"},
-    {id: "03", label: "navbar.item.3", offset: -80, to: "skills"},
-    {id: "04", label: "navbar.item.4", offset: -80, to: "about"},
-    {id: "05", label: "navbar.item.5", offset: -80, to: "contact"},
+    {id: 1, label: "navbar.item.1", offset: -100, to: "hero"},
+    {id: 2, label: "navbar.item.2", offset: -80, to: "projects"},
+    {id: 3, label: "navbar.item.3", offset: -80, to: "skills"},
+    {id: 4, label: "navbar.item.4", offset: -80, to: "about"},
+    {id: 5, label: "navbar.item.5", offset: -80, to: "contact"},
 ]
 
 export const STATS = [
-    {id: "01", count: "6", label: "stats.item.1"},
-    {id: "02", count: "10", label: "stats.item.2"},
-    {id: "03", count: "X", label: "stats.item.3"},
-    {id: "04", count: "X", label: "stats.item.4"}
+    {id: 1, count: "6", label: "stats.item.1"},
+    {id: 2, count: "10", label: "stats.item.2"},
+    {id: 3, count: "6", label: "stats.item.3"},
+    {id: 4, count: "4", label: "stats.item.4"}
 ]
 
 export const SKILLS_TAB = [
@@ -116,7 +116,32 @@ export const PROJECTS = [
             demoUrl: null
         }
     }, {
-        id: 3, title: "projects.pln.title", image: PROJECT_DEFAULT_IMAGE,
+        id: 3, title: "John's Wallet", image: PROJECT_DEFAULT_IMAGE,
+        tags: ["Java", "Springboot"],
+        description: "projects.johnswallet.description",
+        details: {
+            fullDescription: "projects.johnswallet.text",
+            features: [
+                "projects.johnswallet.features.1.label"
+            ],
+            codeUrl: "https://github.com/JoaoGH/John-s-Wallet",
+            demoUrl: null
+        }
+    }, {
+        id: 4, title: "John's Wallet Messaging", image: PROJECT_DEFAULT_IMAGE,
+        tags: ["Java", "Springboot", "RabbitMQ"],
+        description: "projects.johnswalletmsg.description",
+        details: {
+            fullDescription: "projects.johnswalletmsg.text",
+            features: [
+                "projects.johnswalletmsg.features.1.label",
+                "projects.johnswalletmsg.features.2.label"
+            ],
+            codeUrl: "https://github.com/JoaoGH/John-s-Wallet",
+            demoUrl: null
+        }
+    }, {
+        id: 5, title: "projects.pln.title", image: PROJECT_DEFAULT_IMAGE,
         tags: ["Python", "NLP", "Machine Learning", "NLTK", "Pandas"],
         description: "projects.pln.description",
         details: {
@@ -133,7 +158,7 @@ export const PROJECTS = [
             demoUrl: null
         }
     }, {
-        id: 4, title: "projects.cve.title", image: PROJECT_DEFAULT_IMAGE,
+        id: 6, title: "projects.cve.title", image: PROJECT_DEFAULT_IMAGE,
         tags: ["Python", "CVSS", "CVE"],
         description: "projects.cve.description",
         details: {
@@ -148,7 +173,7 @@ export const PROJECTS = [
             demoUrl: null
         }
     }, {
-        id: 5, title: "projects.certverify.title", image: PROJECT_DEFAULT_IMAGE,
+        id: 7, title: "projects.certverify.title", image: PROJECT_DEFAULT_IMAGE,
         tags: ["Python", "PKI", "X.509"],
         description: "projects.certverify.description",
         details: {
@@ -160,31 +185,6 @@ export const PROJECTS = [
                 "projects.certverify.features.4.label"
             ],
             codeUrl: "https://github.com/JoaoGH/verify-digital-cert",
-            demoUrl: null
-        }
-    }, {
-        id: 6, title: "John's Wallet", image: PROJECT_DEFAULT_IMAGE,
-        tags: ["Java", "Springboot"],
-        description: "projects.johnswallet.description",
-        details: {
-            fullDescription: "projects.johnswallet.text",
-            features: [
-                "projects.johnswallet.features.1.label"
-            ],
-            codeUrl: "https://github.com/JoaoGH/John-s-Wallet",
-            demoUrl: null
-        }
-    }, {
-        id: 7, title: "John's Wallet Messaging", image: PROJECT_DEFAULT_IMAGE,
-        tags: ["Java", "Springboot", "RabbitMQ"],
-        description: "projects.johnswalletmsg.description",
-        details: {
-            fullDescription: "projects.johnswalletmsg.text",
-            features: [
-                "projects.johnswalletmsg.features.1.label",
-                "projects.johnswalletmsg.features.2.label"
-            ],
-            codeUrl: "https://github.com/JoaoGH/John-s-Wallet",
             demoUrl: null
         }
     },
