@@ -1,11 +1,11 @@
 import React from "react";
-import {Navbar} from "./components/Navbar/Navbar.jsx";
-import {Hero} from "./components/Hero/Hero.jsx";
-import {TechnicalProficiency} from "./components/TechnicalProficiency/TechnicalProficiency.jsx";
-import {About} from "./components/About/About.jsx";
-import {Projects} from "./components/Projects/Projects.jsx";
-import {Contact} from "./components/Contact/Contact.jsx";
-import {Footer} from "./components/Footer/Footer.jsx";
+import {Navbar} from "./components/Navbar.jsx";
+import {Hero} from "./components/Hero.jsx";
+import {TechnicalProficiency} from "./components/TechnicalProficiency.jsx";
+import {About} from "./components/About.jsx";
+import {Projects} from "./components/Projects.jsx";
+import {Contact} from "./components/Contact.jsx";
+import {Footer} from "./components/Footer.jsx";
 
 const App = () => {
     return (

@@ -5,12 +5,14 @@ import {useTranslation} from "react-i18next";
 export const Tabs = ({tabList, activeTab, onChange}) => {
     const { t } = useTranslation();
     const getActiveStyles = (value) => {
-        return activeTab === value ? "text-white bg-gradient-primary" : "text-black bg-transparent";
+        return activeTab === value
+            ? "text-white bg-gradient-primary"
+            : "text-black bg-transparent";
     };
 
     return (
         <div className="flex items-center justify-center my-10">
-            <div className="bg-[var(--color-tertiary)] rounded-full flex">
+            <div className="bg-[var(--color-accent)] rounded-full flex">
                 {tabList.map((item) => {
                     return (
                         <motion.button
