@@ -60,27 +60,27 @@ export const SKILLS_TAB = [
     {id: "06", label: "skills.tabs.item.6", value: "devops"}
 ]
 export const SKILLS = [
-    {id: 1, icon: FaJava, name: "Java", type: "backend", progress: 80, description: "skills.java.text", level: "Especialista"},
-    {id: 2, icon: FaJs, name: "JavaScript", type: "frontend", progress: 80, description: "skills.javascript.text", level: "Especialista"},
-    {id: 3, icon: TbBrandCpp, name: "C++", type: "backend", progress: 40, description: "skills.cpp.text", level: "Intermediário"},
-    {id: 4, icon: FaPython, name: "Python", type: "backend", progress: 70, description: "skills.python.text", level: "Avançado"},
-    {id: 5, icon: FaHtml5, name: "Html", type: "frontend", progress: 70, description: "skills.html.text", level: "Avançado"},
-    {id: 6, icon: FaCss3, name: "CSS", type: "frontend", progress: 70, description: "skills.css.text", level: "Avançado"},
-    {id: 7, icon: SiOracle, name: "OracleSQL", type: "data", progress: 70, description: "skills.oracle.text", level: "Avançado"},
-    {id: 8, icon: SiPostgresql, name: "PostgreSQL", type: "data", progress: 60, description: "skills.postgresql.text", level: "Avançado"},
-    {id: 9, icon: FaGit, name: "Git", type: "repository", progress: 80, description: "skills.git.text", level: "Especialista"},
-    {id: 10, icon: GiTortoise, name: "Tortoise SVN", type: "repository", progress: 60, description: "skills.tortoisesvn.text", level: "Avançado"},
-    {id: 11, icon: SiGradle, name: "Gradle", type: "devops", progress: 60, description: "skills.gradle.text", level: "Avançado"},
-    {id: 12, icon: FaCss3, name: "Maven", type: "devops", progress: 60, description: "skills.maven.text", level: "Avançado"},
-    {id: 13, icon: FaGitlab, name: "Gitlab CI/CD", type: "devops", progress: 80, description: "skills.gitlabcicd.text", level: "Especialista"},
-    {id: 14, icon: FaJenkins, name: "Jenkins", type: "devops", progress: 60, description: "skills.jenkins.text", level: "Avançado"},
-    {id: 15, icon: FaDocker, name: "Docker", type: "devops", progress: 70, description: "skills.docker.text", level: "Avançado"},
-    {id: 16, icon: SiRabbitmq, name: "RabbitMQ", type: "backend", progress: 40, description: "skills.rabbitmq.text", level: "Intermediário"},
-    {id: 17, icon: SiSpringboot, name: "Springboot", type: "backend", progress: 80, description: "skills.springboot.text", level: "Especialista"},
-    {id: 18, icon: FaJs, name: "Extjs", type: "frontend", progress: 80, description: "skills.extjs.text", level: "Especialista"},
-    {id: 19, icon: DiGrails, name: "Grails", type: "backend", progress: 80, description: "skills.grails.text", level: "Especialista"},
-    {id: 20, icon: FaReact, name: "React", type: "frontend", progress: 50, description: "skills.react.text", level: "Intermediário"},
-    {id: 21, icon: SiTailwindcss, name: "Tailwind CSS", type: "frontend", progress: 40, description: "skills.tailwind.text", level: "Intermediário"}
+    {id: 1, icon: FaJava, name: "Java", type: "backend", progress: 80, description: "skills.java.text"},
+    {id: 2, icon: FaJs, name: "JavaScript", type: "frontend", progress: 80, description: "skills.javascript.text"},
+    {id: 3, icon: TbBrandCpp, name: "C++", type: "backend", progress: 40, description: "skills.cpp.text"},
+    {id: 4, icon: FaPython, name: "Python", type: "backend", progress: 70, description: "skills.python.text"},
+    {id: 5, icon: FaHtml5, name: "Html", type: "frontend", progress: 70, description: "skills.html.text"},
+    {id: 6, icon: FaCss3, name: "CSS", type: "frontend", progress: 70, description: "skills.css.text"},
+    {id: 7, icon: SiOracle, name: "OracleSQL", type: "data", progress: 70, description: "skills.oracle.text"},
+    {id: 8, icon: SiPostgresql, name: "PostgreSQL", type: "data", progress: 60, description: "skills.postgresql.text"},
+    {id: 9, icon: FaGit, name: "Git", type: "repository", progress: 80, description: "skills.git.text"},
+    {id: 10, icon: GiTortoise, name: "Tortoise SVN", type: "repository", progress: 60, description: "skills.tortoisesvn.text"},
+    {id: 11, icon: SiGradle, name: "Gradle", type: "devops", progress: 60, description: "skills.gradle.text"},
+    {id: 12, icon: FaCss3, name: "Maven", type: "devops", progress: 60, description: "skills.maven.text"},
+    {id: 13, icon: FaGitlab, name: "Gitlab CI/CD", type: "devops", progress: 80, description: "skills.gitlabcicd.text"},
+    {id: 14, icon: FaJenkins, name: "Jenkins", type: "devops", progress: 60, description: "skills.jenkins.text"},
+    {id: 15, icon: FaDocker, name: "Docker", type: "devops", progress: 70, description: "skills.docker.text"},
+    {id: 16, icon: SiRabbitmq, name: "RabbitMQ", type: "backend", progress: 40, description: "skills.rabbitmq.text"},
+    {id: 17, icon: SiSpringboot, name: "Springboot", type: "backend", progress: 80, description: "skills.springboot.text"},
+    {id: 18, icon: FaJs, name: "Extjs", type: "frontend", progress: 80, description: "skills.extjs.text"},
+    {id: 19, icon: DiGrails, name: "Grails", type: "backend", progress: 80, description: "skills.grails.text"},
+    {id: 20, icon: FaReact, name: "React", type: "frontend", progress: 50, description: "skills.react.text"},
+    {id: 21, icon: SiTailwindcss, name: "Tailwind CSS", type: "frontend", progress: 40, description: "skills.tailwind.text"}
 ]
 
 export const ABOUT_ME = {
