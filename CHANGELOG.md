@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/JoaoGH/portfolio/compare/v1.0.0...v1.1.0) (2026-10-30)
+
+### ✨ Features
+
+* improve technical SEO and implement semantic HTML ([5d49c98](https://github.com/JoaoGH/portfolio/commit/5d49c98b075a8ac14569382fcc87ebe2c4d452e8))
+
 ## 1.0.0 (2026-10-30)
 
 ### ✨ Features
