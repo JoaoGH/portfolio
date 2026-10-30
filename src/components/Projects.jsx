@@ -45,9 +45,9 @@ export const Projects = () => {
     return (
         <section id="projects" className="bg-background">
             <div className="container mx-auto px-15 py-12 md:py-16">
-                <h4 className="section-title bg-gradient-primary">
+                <h2 className="section-title bg-gradient-primary">
                     {t("projects.title")}
-                </h4>
+                </h2>
 
                 <div className="mt-4 md:mt-6">
                     <p className="text-sm text-justify leading-6 whitespace-pre-line">

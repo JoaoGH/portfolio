@@ -26,9 +26,9 @@ export const TechnicalProficiency = () => {
     return (
         <section id="skills" className="bg-background">
             <div className="container mx-auto px-15 py-12 md:py-16">
-                <h4 className="section-title bg-gradient-primary text-left">
+                <h2 className="section-title bg-gradient-primary text-left">
                     {t("skills.title")}
-                </h4>
+                </h2>
 
                 <div className="mt-4 md:mt-6">
                     <p className="text-sm text-justify leading-6 whitespace-pre-line">

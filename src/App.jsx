@@ -9,7 +9,7 @@ import {Footer} from "./components/Footer.jsx";
 
 const App = () => {
     return (
-        <div>
+        <main>
             <Navbar/>
             <Hero/>
             <Projects/>
@@ -17,7 +17,7 @@ const App = () => {
             <About/>
             <Contact/>
             <Footer/>
-        </div>
+        </main>
     );
 }
 
