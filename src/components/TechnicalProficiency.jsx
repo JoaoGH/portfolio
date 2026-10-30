@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {SKILLS, SKILLS_TAB} from "../utils/data.js";
 import {Tabs} from "./Tabs.jsx";
 import {SkillCard} from "./SkillCard.jsx";
+// eslint-disable-next-line no-unused-vars
 import {motion} from "framer-motion";
 import {useTranslation} from "react-i18next";
 

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import {FiX, FiChevronLeft, FiChevronRight} from 'react-icons/fi';
 import {useTranslation} from 'react-i18next';
 import useEmblaCarousel from 'embla-carousel-react';
@@ -44,14 +44,14 @@ export const ProjectDetailsModal = ({project, onClose}) => {
         loadAdditionalImages();
     }, [project]);
 
-    const handleScroll = () => {
+    const handleScroll = useCallback(() => {
         if (!emblaApi) {
             return
         }
         setSelectedIndex(emblaApi.selectedScrollSnap());
         setCanScrollPrev(emblaApi.canScrollPrev());
         setCanScrollNext(emblaApi.canScrollNext());
-    };
+    }, [emblaApi]);
 
     useEffect(() => {
         if (!emblaApi) {
