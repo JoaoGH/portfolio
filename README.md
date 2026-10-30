@@ -171,4 +171,5 @@ Para que os pipelines operem de forma autônoma, cadastre as seguintes secrets n
 
 | Secret | Finalidade |
 | :--- | :--- |
+| `GH_TOKEN` | Personal Access Token (PAT) com escopo `repo`. Permite que a criação de tags pelo Semantic Release acione o workflow de deploy. |
 | `FIREBASE_SERVICE_ACCOUNT_JGHARTMANN_B8718` | Chave privada JSON da Conta de Serviço do Google Cloud / Firebase com privilégios de publicação no Firebase Hosting. |
