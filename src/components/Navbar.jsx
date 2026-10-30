@@ -45,9 +45,9 @@ export const Navbar = () => {
     }, []);
 
     return (
-        <nav className="sticky top-0 z-50 w-full bg-white/25 backdrop-blur-md border-b border-purple-200/50"
+        <header className="sticky top-0 z-50 w-full bg-white/25 backdrop-blur-md border-b border-purple-200/50"
              ref={navbarRef}>
-            <div className="container mx-auto px-4">
+            <nav className="container mx-auto px-4">
                 <div className="flex items-center h-16">
                     {/* Logo e Menu */}
                     <div className="flex items-center flex-1">
@@ -142,7 +142,7 @@ export const Navbar = () => {
                         ))}
                     </ul>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
     )
 }
