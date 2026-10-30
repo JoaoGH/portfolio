@@ -2,25 +2,25 @@ import React from "react";
 
 import {useEffect, useRef, useState} from 'react';
 
+// Cores para os modos
+const colors = {
+    day: {
+        bg: '#f5f3ff',
+        particles: ['#6D28D9', '#F472B6', '#2DD4BF'],
+        connections: '#c4b5fd'
+    },
+    night: {
+        bg: '#111827',
+        particles: ['#8B5CF6', '#EC4899', '#06B6D4'],
+        connections: '#4c1d95'
+    }
+};
+
 export const ParticleText = ({text = "< / >", defaultMode = 'day'}) => {
     const canvasRef = useRef(null);
     const particlesRef = useRef([]);
     const originalPositionsRef = useRef([]);
     const [mode] = useState(defaultMode);
-
-    // Cores para os modos
-    const colors = {
-        day: {
-            bg: '#f5f3ff',
-            particles: ['#6D28D9', '#F472B6', '#2DD4BF'],
-            connections: '#c4b5fd'
-        },
-        night: {
-            bg: '#111827',
-            particles: ['#8B5CF6', '#EC4899', '#06B6D4'],
-            connections: '#4c1d95'
-        }
-    };
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -167,7 +167,7 @@ export const ParticleText = ({text = "< / >", defaultMode = 'day'}) => {
         return () => {
             window.removeEventListener('resize', resizeCanvas);
         };
-    }, [text, mode, colors]);
+    }, [text, mode]);
 
     return (
         <div className="relative">

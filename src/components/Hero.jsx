@@ -10,10 +10,11 @@ export const Hero = () => {
     const handleDownload = () => {
         const link = document.createElement('a');
 
-        const english = i18n.language === 'en';
-        const fileUrl = `/docs/6-CV${english ? "-English" : ""}.pdf`;
+        const sufix = i18n.language ? "Resume" : "Curriculum";
+        const fileUrl = `/docs/${sufix}.pdf`;
+
         link.href = fileUrl;
-        link.download = "curriculum_vitae_JGHartrmann.pdf"
+        link.download = `${sufix} - JGHartmann.pdf`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
