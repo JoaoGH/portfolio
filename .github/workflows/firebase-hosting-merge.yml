@@ -4,7 +4,6 @@ on:
   push:
     tags:
       - 'v*.*.*'
-      - 'v*'
 
 jobs:
   build_test_and_deploy:
@@ -32,6 +31,6 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JGHARTMANN_B8718 }}'
           channelId: live
           projectId: jghartmann-b8718
