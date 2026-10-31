@@ -1,3 +1,9 @@
+## [1.2.1](https://github.com/JoaoGH/portfolio/compare/v1.2.0...v1.2.1) (2026-10-31)
+
+### 🐛 Bug Fixes
+
+* corrigir evento de deploy ([f909a03](https://github.com/JoaoGH/portfolio/commit/f909a03d808814ffcd51f857e2d20b3dce6e5b36))
+
 ## [1.2.0](https://github.com/JoaoGH/portfolio/compare/v1.1.0...v1.2.0) (2026-10-31)
 
 ### ✨ Features
