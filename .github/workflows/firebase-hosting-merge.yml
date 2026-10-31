@@ -1,9 +1,8 @@
 name: Deploy to Firebase Hosting on Release Tag
 
 on:
-  push:
-    tags:
-      - 'v*.*.*'
+  release:
+    types: [published]
 
 jobs:
   build_test_and_deploy:
