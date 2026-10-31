@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/JoaoGH/portfolio/compare/v1.1.0...v1.2.0) (2026-10-31)
+
+### ✨ Features
+
+* atualizar layout do rodapé e adicionar versão ([379c3b7](https://github.com/JoaoGH/portfolio/commit/379c3b79c4f63dadebf295032f047e2968b34b34))
+
 ## [1.1.0](https://github.com/JoaoGH/portfolio/compare/v1.0.0...v1.1.0) (2026-10-30)
 
 ### ✨ Features
