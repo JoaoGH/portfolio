@@ -3,6 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem('theme');
+          const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const isDark = stored !== null ? stored === 'dark' : systemDark;
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+          const meta = document.querySelector('meta[name="color-scheme"]');
+          if (meta) {
+            meta.content = isDark ? 'dark' : 'light';
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>João Hartmann - Full Stack Developer | Portfolio</title>
     <meta name="description" content="Portfolio of João Hartmann, a Full Stack Developer specializing in React, Node.js, and cloud technologies. Discover my projects, skills, and experience." />

@@ -47,9 +47,9 @@ export const LanguageSelector = ({mobile = false}) => {
                 onClick={toggleDropdown}
                 aria-label={t("navbar.item.language.hint")}
                 className={`
-                    flex items-center gap-2 p-2 rounded-full transition-colors ${mobile ? "hover:bg-white/20" : ""}
-                    md:text-[14px] font-medium transition-transform duration-300 ease-in-out hover:scale-105`}>
-                <FaGlobe className="mr-2 text-gray-700"/>
+                    flex items-center gap-2 p-2 rounded-full transition-colors ${mobile ? "hover:bg-white/20" : "hover:bg-purple-50 dark:hover:bg-gray-800"}
+                    md:text-[14px] font-medium transition-transform duration-300 ease-in-out hover:scale-105 text-gray-700 dark:text-gray-200`}>
+                <FaGlobe className="mr-2 text-gray-700 dark:text-gray-200"/>
                 {!mobile && (
                     <>
                         <span className="text-sm font-medium">{currentLanguage.code.toUpperCase()}</span>
@@ -60,8 +60,8 @@ export const LanguageSelector = ({mobile = false}) => {
 
             {isOpen && (
                 <div className={
-                    `absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-50 
-                        border border-gray-200 divide-y divide-gray-100
+                    `absolute right-0 mt-2 w-48 bg-white dark:bg-gray-900 rounded-lg shadow-lg z-50 
+                        border border-gray-200 dark:border-gray-800 divide-y divide-gray-100 dark:divide-gray-800
                         ${mobile ? "origin-top-right" : "origin-top"}
                         `}
                 >
@@ -72,8 +72,8 @@ export const LanguageSelector = ({mobile = false}) => {
                                 onClick={() => changeLanguage(lang.code)}
                                 className={
                                     `flex items-center w-full px-4 py-2 text-left
-                                     hover:bg-gray-50 transition-colors 
-                                     ${i18n.language === lang.code ? "bg-purple-50 text-purple-600" : "text-gray-700"}`}
+                                     hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors 
+                                     ${i18n.language === lang.code ? "bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400" : "text-gray-700 dark:text-gray-200"}`}
                             >
                                 <span className="mr-2 text-lg">{lang.country_code}</span>
                                 <span>{lang.name}</span>

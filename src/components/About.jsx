@@ -13,7 +13,7 @@ export const About = () => {
                 </h2>
 
                 <div className="mt-4 md:mt-6">
-                    <p className="text-sm text-justify leading-6 whitespace-pre-line">
+                    <p className="text-sm text-justify leading-6 whitespace-pre-line text-gray-700 dark:text-gray-300">
                         <Trans i18nKey="about.text" components={{1: <br/>}}/>
                     </p>
 
@@ -28,12 +28,12 @@ export const About = () => {
                                         target="_blank"
                                         aria-label={item.label}
                                     >
-                                        <item.icon className="text-2xl text-secondary transition-transform duration-300
+                                        <item.icon className="text-2xl text-secondary dark:text-purple-300 transition-transform duration-300
                                             group-hover:rotate-12 group-hover:scale-110 group-hover:translate-y-[-2px]
-                                            group-hover:text-primary"/>
+                                            group-hover:text-primary dark:group-hover:text-purple-400"/>
                                         {item.flag && (
-                                            <span className="absolute -mt-7 text-[9px] font-medium text-secondary
-                                                            transition-all duration-300 group-hover:text-primary">
+                                            <span className="absolute -mt-7 text-[9px] font-medium text-secondary dark:text-purple-300
+                                                            transition-all duration-300 group-hover:text-primary dark:group-hover:text-purple-400">
                                                 {item.flag}
                                             </span>
                                         )}

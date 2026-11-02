@@ -5,7 +5,7 @@ export const Footer = () => {
     const { t } = useTranslation();
 
     return (
-        <footer id="footer" className="bg-purple-100 text-xs text-secondary p-5">
+        <footer id="footer" className="bg-purple-100 dark:bg-gray-900 border-t border-purple-200 dark:border-purple-900/40 text-xs text-secondary dark:text-purple-300 p-5 transition-colors">
             <div className="container mx-auto px-15 flex flex-col md:flex-row items-center justify-between text-sm">
                 {/* Direitos e créditos à esquerda */}
                 <div className="mb-4 md:mb-0">
@@ -15,7 +15,7 @@ export const Footer = () => {
                 {/* Info sobre tecnologias e versão à direita */}
                 <div className="flex items-center gap-3">
                     <p>{t("footer.using")}</p>
-                    <span className="px-2 py-1 rounded-md bg-purple-200 text-secondary border border-purple-300 font-medium">
+                    <span className="px-2 py-1 rounded-md bg-purple-200 dark:bg-purple-950/80 text-secondary dark:text-purple-300 border border-purple-300 dark:border-purple-800 font-medium">
                         v{import.meta.env.PACKAGE_VERSION}
                     </span>
                 </div>

@@ -3,6 +3,7 @@ import {MENU_LINKS} from "../utils/data.js";
 import {Link} from "react-scroll";
 import {FaCode} from "react-icons/fa";
 import {LanguageSelector} from "./LanguageSelector.jsx";
+import {ThemeToggle} from "./ThemeToggle.jsx";
 import {useTranslation} from "react-i18next";
 
 export const Navbar = () => {
@@ -45,7 +46,7 @@ export const Navbar = () => {
     }, []);
 
     return (
-        <header className="sticky top-0 z-50 w-full bg-white/25 backdrop-blur-md border-b border-purple-200/50"
+        <header className="sticky top-0 z-50 w-full bg-white/25 dark:bg-gray-950/40 backdrop-blur-md border-b border-purple-200/50 dark:border-purple-900/40"
              ref={navbarRef}>
             <nav className="container mx-auto px-4">
                 <div className="flex items-center h-16">
@@ -61,7 +62,7 @@ export const Navbar = () => {
                             className="flex items-center justify-center rounded-full cursor-pointer mr-4"
                             onClick={closeMenu}
                         >
-                            <FaCode className="text-xl text-purple-600"/>
+                            <FaCode className="text-xl text-purple-600 dark:text-purple-400"/>
                         </Link>
 
                         {/* Menu Desktop */}
@@ -76,7 +77,7 @@ export const Navbar = () => {
                                             spy
                                             offset={item.offset}
                                             aria-label={t(item.label + ".hint")}
-                                            className="menu-item px-3 py-2 hover:text-purple-600 transition-colors"
+                                            className="menu-item px-3 py-2 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                                         >
                                             {t(item.label + ".label")}
                                         </Link>
@@ -88,17 +89,19 @@ export const Navbar = () => {
 
                     {/* Controles do lado direito */}
                     <div className="flex items-center gap-2">
-                        {/* Seletor de Idioma Desktop */}
-                        <div className="hidden md:block">
+                        {/* Seletor de Idioma e Tema Desktop */}
+                        <div className="hidden md:flex items-center gap-2">
+                            <ThemeToggle />
                             <LanguageSelector/>
                         </div>
 
                         {/* Botão Mobile */}
-                        <div className="flex md:hidden items-center gap-3">
+                        <div className="flex md:hidden items-center gap-2">
+                            <ThemeToggle mobile={true} />
                             <LanguageSelector mobile={true}/>
                             <button
                                 onClick={toggleMenu}
-                                className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-700 dark:text-gray-200"
                                 aria-label={t("navbar.item.menu.hint")}
                                 aria-expanded={isOpen}
                             >
@@ -121,8 +124,8 @@ export const Navbar = () => {
                 </div>
 
                 {/* Menu Mobile */}
-                <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} absolute top-16 right-2 bg-white rounded-lg ml-12 min-w-3xs
-                                shadow-lg border border-purple-200`}>
+                <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} absolute top-16 right-2 bg-white dark:bg-gray-900 rounded-lg ml-12 min-w-3xs
+                                shadow-lg border border-purple-200 dark:border-purple-800`}>
                     <ul className="flex flex-col p-2 w-auto min-w-[160px]">
                         {MENU_LINKS.map((item) => (
                             <li key={item.id}>
@@ -133,7 +136,7 @@ export const Navbar = () => {
                                     spy
                                     offset={item.offset}
                                     aria-label={t(item.label + ".hint")}
-                                    className="menu-item block px-3 py-2 hover:bg-purple-50 rounded-md transition-colors"
+                                    className="menu-item block px-3 py-2 hover:bg-purple-50 dark:hover:bg-purple-950/50 rounded-md transition-colors"
                                     onClick={closeMenu}
                                 >
                                     {t(item.label + ".label")}
