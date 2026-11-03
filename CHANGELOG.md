@@ -1,3 +1,9 @@
+## [1.4.1](https://github.com/JoaoGH/portfolio/compare/v1.4.0...v1.4.1) (2026-11-03)
+
+### 🐛 Bug Fixes
+
+* corrigir detecção automática de idioma no load inicial ([7694411](https://github.com/JoaoGH/portfolio/commit/7694411a21603b52fe6dbb4ac4f9aee44b48cf1a))
+
 ## [1.4.0](https://github.com/JoaoGH/portfolio/compare/v1.3.0...v1.4.0) (2026-11-03)
 
 ### ✨ Features
