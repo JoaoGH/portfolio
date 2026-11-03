@@ -10,4 +10,12 @@ describe('StatInfoCard Component', () => {
     expect(screen.getByText('10')).toBeInTheDocument();
     expect(screen.getByText('stats.item.2.label')).toBeInTheDocument();
   });
+
+  it('deve renderizar o ícone e o rótulo traduzido quando icon for fornecido', () => {
+    const MockIcon = () => <svg data-testid="mock-icon" />;
+    render(<StatInfoCard icon={MockIcon} label="stats.item.2" />);
+
+    expect(screen.getByTestId('mock-icon')).toBeInTheDocument();
+    expect(screen.getByText('stats.item.2.label')).toBeInTheDocument();
+  });
 });

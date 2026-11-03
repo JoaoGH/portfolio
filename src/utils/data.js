@@ -11,12 +11,16 @@ import {
     FaDocker,
     FaGithub,
     FaStackOverflow,
-    FaReact
+    FaReact,
+    FaServer,
+    FaShieldAlt,
+    FaSyncAlt
 } from "react-icons/fa";
 import {TbBrandCpp} from "react-icons/tb"
 import {SiPostgresql, SiOracle, SiGradle, SiRabbitmq, SiLeetcode, SiSpringboot, SiTailwindcss} from "react-icons/si"
 import {GiTortoise} from "react-icons/gi"
 import {DiGrails} from "react-icons/di";
+import {getYearsOfExperience} from "./experience.js";
 
 import PROJECT_IMAGE_1 from "../assets/images/project-01/main.webp"
 import PROJECT_IMAGE_8 from "../assets/images/project-08/main.webp"
@@ -36,10 +40,10 @@ export const MENU_LINKS = [
 ]
 
 export const STATS = [
-    {id: 1, count: "7", label: "stats.item.1"},
-    {id: 2, count: "10", label: "stats.item.2"},
-    {id: 3, count: "6", label: "stats.item.3"},
-    {id: 4, count: "4", label: "stats.item.4"}
+    {id: 1, count: `${getYearsOfExperience()}+`, label: "stats.item.1"},
+    {id: 2, icon: FaServer, label: "stats.item.2"},
+    {id: 3, icon: FaShieldAlt, label: "stats.item.3"},
+    {id: 4, icon: FaSyncAlt, label: "stats.item.4"}
 ]
 
 export const SKILLS_TAB = [

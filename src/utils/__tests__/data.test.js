@@ -38,12 +38,18 @@ describe('Data Constants (utils/data.js)', () => {
   });
 
   describe('STATS', () => {
-    it('deve possuir 4 itens de métricas com valores numéricos válidos', () => {
+    it('deve possuir 4 itens de pilares com labels e count ou icon válidos', () => {
       expect(STATS).toHaveLength(4);
-      STATS.forEach((stat) => {
-        expect(stat).toHaveProperty('count');
+
+      // Primeiro item deve ser a métrica dinâmica de anos de experiência
+      expect(STATS[0]).toHaveProperty('count');
+      expect(STATS[0].label).toBe('stats.item.1');
+      expect(parseInt(STATS[0].count, 10)).toBeGreaterThan(0);
+
+      // Demais itens devem possuir ícones representativos dos pilares qualitativos
+      STATS.slice(1).forEach((stat) => {
         expect(stat).toHaveProperty('label');
-        expect(Number(stat.count)).toBeGreaterThan(0);
+        expect(typeof stat.icon).toBe('function');
       });
     });
   });
