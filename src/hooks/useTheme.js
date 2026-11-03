@@ -33,10 +33,16 @@ export const useTheme = () => {
   const applyTheme = useCallback((newTheme) => {
     setTheme(newTheme);
     applyThemeToDOM(newTheme);
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('app-theme-change', { detail: newTheme }));
+    }
   }, []);
 
   const toggleTheme = useCallback(() => {
-    const nextTheme = theme === 'dark' ? 'light' : 'dark';
+    const current = typeof document !== 'undefined' && document.documentElement.classList.contains('dark')
+      ? 'dark'
+      : 'light';
+    const nextTheme = current === 'dark' ? 'light' : 'dark';
 
     try {
       localStorage.setItem('theme', nextTheme);
@@ -64,11 +70,23 @@ export const useTheme = () => {
     } else {
       updateDOM();
     }
-  }, [theme, applyTheme]);
+  }, [applyTheme]);
 
   useEffect(() => {
-    // Sincroniza o DOM com o tema inicial no client
-    applyThemeToDOM(theme);
+    // Sincroniza o DOM com o tema inicial no client apenas se necessário
+    if (typeof document !== 'undefined') {
+      const isDomDark = document.documentElement.classList.contains('dark');
+      const domTheme = isDomDark ? 'dark' : 'light';
+      if (domTheme !== theme) {
+        applyThemeToDOM(theme);
+      }
+    }
+
+    // Escuta evento customizado para sincronizar todos os componentes na mesma página em tempo real
+    const handleAppThemeChange = (e) => {
+      setTheme(e.detail);
+    };
+    window.addEventListener('app-theme-change', handleAppThemeChange);
 
     // Escuta alterações na preferência do sistema operacional
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -109,6 +127,7 @@ export const useTheme = () => {
     window.addEventListener('storage', handleStorageChange);
 
     return () => {
+      window.removeEventListener('app-theme-change', handleAppThemeChange);
       if (mediaQuery?.removeEventListener) {
         mediaQuery.removeEventListener('change', handleMediaChange);
       } else if (mediaQuery?.removeListener) {
