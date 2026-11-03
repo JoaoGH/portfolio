@@ -3,14 +3,16 @@ import {STATS} from "../utils/data.js";
 import {StatInfoCard} from "./StatInfoCard.jsx";
 import {useTranslation} from "react-i18next";
 import {ParticleText} from "./ParticleText.jsx";
+import {getYearsOfExperience} from "../utils/experience.js";
 
 export const Hero = () => {
     const {t, i18n} = useTranslation();
+    const yearsOfExperience = getYearsOfExperience();
 
     const handleDownload = () => {
         const link = document.createElement('a');
 
-        const sufix = i18n.language ? "Resume" : "Curriculum";
+        const sufix = i18n.language === "en" ? "Resume" : "Curriculum";
         const fileUrl = `/docs/${sufix}.pdf`;
 
         link.href = fileUrl;
@@ -33,7 +35,7 @@ export const Hero = () => {
                             {t("hero.title")}
                         </h1>
                         <p className="w-full lg:w-[500px] text-sm lg:text-base mt-4 text-gray-600 dark:text-gray-300">
-                            {t("hero.item.2.label")}
+                            {t("hero.item.2.label", { years: yearsOfExperience })}
                         </p>
 
                         <div className="flex justify-center lg:justify-start gap-4 md:gap-8 mt-6">
@@ -56,7 +58,12 @@ export const Hero = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 md:mt-16">
                     {STATS.map((item) => {
                         return (
-                            <StatInfoCard key={item.id} count={item.count} label={item.label}/>
+                            <StatInfoCard
+                                key={item.id}
+                                count={item.count}
+                                icon={item.icon}
+                                label={item.label}
+                            />
                         );
                     })}
                 </div>
