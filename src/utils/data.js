@@ -19,6 +19,7 @@ import {GiTortoise} from "react-icons/gi"
 import {DiGrails} from "react-icons/di";
 
 import PROJECT_IMAGE_1 from "../assets/images/project-01/main.webp"
+import PROJECT_IMAGE_8 from "../assets/images/project-08/main.webp"
 import PROJECT_DEFAULT_IMAGE from "../assets/images/project.webp"
 
 export const SUPPORTED_LANGUAGES = [
@@ -187,6 +188,21 @@ export const PROJECTS = [
             ],
             codeUrl: "https://github.com/JoaoGH/verify-digital-cert",
             demoUrl: null
+        }
+    }, {
+        id: 8, title: "projects.instrutor.title", image: PROJECT_IMAGE_8,
+        tags: ["React", "Vite", "Tailwind CSS"],
+        description: "projects.instrutor.description",
+        details: {
+            fullDescription: "projects.instrutor.text",
+            features: [
+                "projects.instrutor.features.1.label",
+                "projects.instrutor.features.2.label",
+                "projects.instrutor.features.3.label",
+                "projects.instrutor.features.4.label"
+            ],
+            codeUrl: "https://github.com/JoaoGH/instrutor-autonomo",
+            demoUrl: "https://instrutorhelvio.com.br/"
         }
     },
 ]
