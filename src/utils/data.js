@@ -18,8 +18,8 @@ import {SiPostgresql, SiOracle, SiGradle, SiRabbitmq, SiLeetcode, SiSpringboot, 
 import {GiTortoise} from "react-icons/gi"
 import {DiGrails} from "react-icons/di";
 
-import PROJECT_IMAGE_1 from "../assets/images/project-01/main.png"
-import PROJECT_DEFAULT_IMAGE from "../assets/images/project.png"
+import PROJECT_IMAGE_1 from "../assets/images/project-01/main.webp"
+import PROJECT_DEFAULT_IMAGE from "../assets/images/project.webp"
 
 export const SUPPORTED_LANGUAGES = [
     {code: "en", name: "English", country_code: "us"},
