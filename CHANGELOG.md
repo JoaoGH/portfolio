@@ -1,3 +1,22 @@
+## [1.4.0](https://github.com/JoaoGH/portfolio/compare/v1.3.0...v1.4.0) (2026-11-03)
+
+### ✨ Features
+
+* adicionar projeto a lista ([702dd58](https://github.com/JoaoGH/portfolio/commit/702dd5837d04fd2b6ae76a84cc273e8d402145b4))
+
+### 🐛 Bug Fixes
+
+* corrigir calculo de anos de experiencia ([74502d3](https://github.com/JoaoGH/portfolio/commit/74502d39b1e93f84fb31e83aa389511aa78e7219))
+* corrigir download. ([7032ee1](https://github.com/JoaoGH/portfolio/commit/7032ee11885cc77b761b2fd8f252ec230aefe693))
+* corrigir tempo ([1ce797b](https://github.com/JoaoGH/portfolio/commit/1ce797b1827a7346cec5d1216ac9642eaae3a29f))
+* melhorar textos i18n. ([fb2645a](https://github.com/JoaoGH/portfolio/commit/fb2645add9ed05ecf5278aef494aedc40e9d907c))
+
+### ♻️ Code Refactoring
+
+* alterar stat info card usado no hero. ([1a035e2](https://github.com/JoaoGH/portfolio/commit/1a035e2bee1dd8e45b16960089aa11ef18e2d24d))
+* converter imagens para webp ([d9c7294](https://github.com/JoaoGH/portfolio/commit/d9c729412d135a1b47ee4fdcea92cc67228fecc3))
+* criar função para calcular anos de experiencia. ([2481e88](https://github.com/JoaoGH/portfolio/commit/2481e88e5f27f855fa7413aa4e938045d61e0834))
+
 ## [1.3.0](https://github.com/JoaoGH/portfolio/compare/v1.2.1...v1.3.0) (2026-11-03)
 
 ### ✨ Features
