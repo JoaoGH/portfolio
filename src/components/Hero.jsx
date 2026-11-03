@@ -3,12 +3,11 @@ import {STATS} from "../utils/data.js";
 import {StatInfoCard} from "./StatInfoCard.jsx";
 import {useTranslation} from "react-i18next";
 import {ParticleText} from "./ParticleText.jsx";
+import {getYearsOfExperience} from "../utils/experience.js";
 
 export const Hero = () => {
     const {t, i18n} = useTranslation();
-    const startYear = 2019;
-    const currentYear = new Date().getFullYear();
-    const yearsOfExperience = currentYear - startYear;
+    const yearsOfExperience = getYearsOfExperience();
 
     const handleDownload = () => {
         const link = document.createElement('a');
