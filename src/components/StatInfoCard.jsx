@@ -5,7 +5,7 @@ export const StatInfoCard = ({count, label}) => {
     const { t } = useTranslation();
 
     return (
-        <div className="flex-1 flex gap-3 md:gap-5 bg-gradient-stats rounded-[14px] p-5 border border-transparent dark:border-purple-900/30">
+        <div className="flex-1 flex gap-3 md:gap-5 bg-gradient-stats rounded-[14px] p-5 dark:border dark:border-purple-900/30">
             <h4 className="text-4xl md:text-5xl font-medium text-secondary dark:text-purple-300">
                 {count}
             </h4>
