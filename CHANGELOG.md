@@ -1,3 +1,14 @@
+## [1.3.0](https://github.com/JoaoGH/portfolio/compare/v1.2.1...v1.3.0) (2026-11-03)
+
+### ✨ Features
+
+* adicionar suporte a dark mode nativo e botão de alternância no header ([5fa6267](https://github.com/JoaoGH/portfolio/commit/5fa62670768f4a2217729a347703c8f20afc50e3))
+* sincronizar tema em tempo real no ParticleText e useTheme ([e0775cc](https://github.com/JoaoGH/portfolio/commit/e0775cc28ba91341fe5cfe7090bdfb96102013d6))
+
+### 🐛 Bug Fixes
+
+* corrigir borda ([985dc05](https://github.com/JoaoGH/portfolio/commit/985dc05b8d0392cac2c504ce8aaae5d42cb7003c))
+
 ## [1.2.1](https://github.com/JoaoGH/portfolio/compare/v1.2.0...v1.2.1) (2026-10-31)
 
 ### 🐛 Bug Fixes
