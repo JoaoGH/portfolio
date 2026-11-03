@@ -10,7 +10,7 @@ export const Hero = () => {
     const handleDownload = () => {
         const link = document.createElement('a');
 
-        const sufix = i18n.language ? "Resume" : "Curriculum";
+        const sufix = i18n.language === "en" ? "Resume" : "Curriculum";
         const fileUrl = `/docs/${sufix}.pdf`;
 
         link.href = fileUrl;
