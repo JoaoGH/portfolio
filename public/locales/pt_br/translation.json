@@ -16,7 +16,7 @@
   "navbar.item.menu.hint": "Menu",
   "hero.item.1.label": "Oi, meu nome é João",
   "hero.title": "Engenheiro de Software Fullstack Sênior",
-  "hero.item.2.label": "Engenheiro de Software com 6+ anos de experiência na construção de arquiteturas backend resilientes e interfaces web responsivas. Especialista nos ecossistemas Java (Spring Boot, Grails) e JavaScript (React, ExtJS), com histórico comprovado na modernização de monólitos legados para microsserviços distribuídos e no fortalecimento da segurança corporativa.",
+  "hero.item.2.label": "Engenheiro de Software com {{years}}+ anos de experiência na construção de arquiteturas backend resilientes e interfaces web responsivas. Especialista nos ecossistemas Java (Spring Boot, Grails) e JavaScript (React, ExtJS), com histórico comprovado na modernização de monólitos legados para microsserviços distribuídos e no fortalecimento da segurança corporativa.",
   "hero.button.1.text": "Explorar Projetos e Sistemas",
   "hero.button.1.hint": "Explorar Projetos e Sistemas",
   "hero.button.2.text": "Baixar Currículo (PDF)",

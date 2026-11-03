@@ -16,7 +16,7 @@
   "navbar.item.menu.hint": "Menu",
   "hero.item.1.label": "Hi, my name is João, but you can call me John",
   "hero.title": "Senior Fullstack Software Engineer",
-  "hero.item.2.label": "Software Engineer with 6+ years of experience building resilient backend architectures and responsive web interfaces. Specialist in the Java (Spring Boot, Grails) and JavaScript (React, ExtJS) ecosystems, with a proven track record in modernizing legacy monoliths into distributed microservices and strengthening enterprise security.",
+  "hero.item.2.label": "Software Engineer with {{years}}+ years of experience building resilient backend architectures and responsive web interfaces. Specialist in the Java (Spring Boot, Grails) and JavaScript (React, ExtJS) ecosystems, with a proven track record in modernizing legacy monoliths into distributed microservices and strengthening enterprise security.",
   "hero.button.1.text": "Explore Projects and Systems",
   "hero.button.1.hint": "Explore Projects and Systems",
   "hero.button.2.text": "Download Resume (PDF)",

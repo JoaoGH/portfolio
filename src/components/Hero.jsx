@@ -6,6 +6,9 @@ import {ParticleText} from "./ParticleText.jsx";
 
 export const Hero = () => {
     const {t, i18n} = useTranslation();
+    const startYear = 2019;
+    const currentYear = new Date().getFullYear();
+    const yearsOfExperience = currentYear - startYear;
 
     const handleDownload = () => {
         const link = document.createElement('a');
@@ -33,7 +36,7 @@ export const Hero = () => {
                             {t("hero.title")}
                         </h1>
                         <p className="w-full lg:w-[500px] text-sm lg:text-base mt-4 text-gray-600 dark:text-gray-300">
-                            {t("hero.item.2.label")}
+                            {t("hero.item.2.label", { years: yearsOfExperience })}
                         </p>
 
                         <div className="flex justify-center lg:justify-start gap-4 md:gap-8 mt-6">
