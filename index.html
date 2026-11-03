@@ -20,6 +20,17 @@
             meta.content = isDark ? 'dark' : 'light';
           }
         } catch (e) {}
+
+        try {
+          const storedLang = localStorage.getItem('userLanguage');
+          let lang = storedLang;
+          if (!lang) {
+            const browserLang = (navigator.language || '').toLowerCase();
+            lang = browserLang.startsWith('pt') ? 'pt_br' : 'en';
+            localStorage.setItem('userLanguage', lang);
+          }
+          document.documentElement.lang = lang === 'pt_br' ? 'pt-BR' : 'en';
+        } catch (e) {}
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
