@@ -35,7 +35,7 @@ export const MENU_LINKS = [
 ]
 
 export const STATS = [
-    {id: 1, count: "6", label: "stats.item.1"},
+    {id: 1, count: "7", label: "stats.item.1"},
     {id: 2, count: "10", label: "stats.item.2"},
     {id: 3, count: "6", label: "stats.item.3"},
     {id: 4, count: "4", label: "stats.item.4"}
@@ -49,6 +49,7 @@ export const SKILLS_TAB = [
     {id: 5, label: "skills.tabs.item.5", value: "repository"},
     {id: 6, label: "skills.tabs.item.6", value: "devops"}
 ]
+
 export const SKILLS = [
     {id: 1, icon: FaJava, name: "Java", type: "backend", progress: 80, description: "skills.java.text"},
     {id: 2, icon: FaJs, name: "JavaScript", type: "frontend", progress: 80, description: "skills.javascript.text"},
