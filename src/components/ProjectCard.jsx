@@ -5,13 +5,13 @@ export const ProjectCard = ({imgUrl, title, description, tags, onClick}) => {
     const { t } = useTranslation();
 
     return (
-        <div className="h-full bg-white rounded-xl overflow-hidden shadow-md mx-2" onClick={onClick}>
+        <div className="h-full bg-white dark:bg-gray-900 border border-transparent dark:border-gray-800 rounded-xl overflow-hidden shadow-md mx-2 transition-colors cursor-pointer" onClick={onClick}>
             <img src={imgUrl} alt={`Screenshot of the project ${t(title)}`} className="w-full h-72 md:h-80 object-cover"/>
             <div className="px-4 py-5">
-                <h3 className="text-base font-semibold line-clamp-2 overflow-hidden text-ellipsis">
+                <h3 className="text-base font-semibold line-clamp-2 overflow-hidden text-ellipsis text-gray-900 dark:text-white">
                     {t(title)}
                 </h3>
-                <h4 className="text-xs line-clamp-2 overflow-hidden text-ellipsis">
+                <h4 className="text-xs line-clamp-2 overflow-hidden text-ellipsis text-gray-600 dark:text-gray-300 mt-1">
                     {t(description)}
                 </h4>
                 <div className="flex flex-wrap gap-2 mt-2">
@@ -19,7 +19,7 @@ export const ProjectCard = ({imgUrl, title, description, tags, onClick}) => {
                         return (
                             <span
                                 key={id}
-                                className="text-xs text-secondary bg-purple-100 px-3 py-1 rounded"
+                                className="text-xs text-secondary dark:text-purple-300 bg-purple-100 dark:bg-purple-950/60 px-3 py-1 rounded"
                             >
                                 {tag}
                             </span>

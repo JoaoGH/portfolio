@@ -15,7 +15,7 @@ export const Contact = () => {
                 </h2>
 
                 <div className="mt-4 md:mt-6">
-                    <p className="text-sm text-justify leading-6 whitespace-pre-line">
+                    <p className="text-sm text-justify leading-6 whitespace-pre-line text-gray-700 dark:text-gray-300">
                         <Trans i18nKey="contact.text" components={{1: <br/>}}/>
                     </p>
 

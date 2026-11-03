@@ -1,6 +1,5 @@
-import React from "react";
-
-import {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from "react";
+import {useTheme} from "../hooks/useTheme.js";
 
 // Cores para os modos
 const colors = {
@@ -16,15 +15,33 @@ const colors = {
     }
 };
 
-export const ParticleText = ({text = "< / >", defaultMode = 'day'}) => {
+export const ParticleText = ({text = "< / >"}) => {
     const canvasRef = useRef(null);
     const particlesRef = useRef([]);
     const originalPositionsRef = useRef([]);
-    const [mode] = useState(defaultMode);
+    const { isDark } = useTheme();
+    const mode = isDark ? 'night' : 'day';
+    const modeRef = useRef(mode);
+    modeRef.current = mode;
+
+    // Atualiza imediatamente a cor das partículas existentes quando o modo muda
+    useEffect(() => {
+        modeRef.current = mode;
+        if (particlesRef.current.length > 0) {
+            const palette = colors[mode].particles;
+            particlesRef.current.forEach(p => {
+                p.color = palette[Math.floor(Math.random() * palette.length)];
+            });
+        }
+    }, [mode]);
 
     useEffect(() => {
         const canvas = canvasRef.current;
+        if (!canvas) return;
         const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        let animationFrameId;
 
         // Configurações
         const fontSettings = {
@@ -60,7 +77,6 @@ export const ParticleText = ({text = "< / >", defaultMode = 'day'}) => {
             });
             if (currentLine) lines.push(currentLine);
 
-
             // Calcula posição vertical inicial
             const textHeight = lines.length * lineHeight;
             const startY = (canvas.height - textHeight) / 2 + fontSettings.size * 0.8;
@@ -74,6 +90,8 @@ export const ParticleText = ({text = "< / >", defaultMode = 'day'}) => {
             const particles = [];
             const positions = [];
             const gridSize = 5;
+            const currentMode = modeRef.current;
+            const currentPalette = colors[currentMode].particles;
 
             for (let y = 0; y < canvas.height; y += gridSize) {
                 for (let x = 0; x < canvas.width; x += gridSize) {
@@ -90,9 +108,7 @@ export const ParticleText = ({text = "< / >", defaultMode = 'day'}) => {
                             originalY: targetY,
                             speed: Math.random() * 0.06 + 0.02,
                             size: Math.random() * Math.PI + 1,
-                            color: colors[mode].particles[
-                                Math.floor(Math.random() * colors[mode].particles.length)
-                                ],
+                            color: currentPalette[Math.floor(Math.random() * currentPalette.length)],
                             angle: Math.random() * 0.1
                         });
                         positions.push({targetX, targetY});
@@ -127,13 +143,14 @@ export const ParticleText = ({text = "< / >", defaultMode = 'day'}) => {
                 ctx.fill();
             });
 
-            requestAnimationFrame(animate);
+            animationFrameId = requestAnimationFrame(animate);
         };
 
         // Desenha conexões entre partículas
         const drawConnections = () => {
             const particles = particlesRef.current;
-            ctx.strokeStyle = `${colors[mode].connections}30`;
+            const currentMode = modeRef.current;
+            ctx.strokeStyle = `${colors[currentMode].connections}30`;
             ctx.lineWidth = 0.5;
 
             for (let i = 0; i < particles.length; i++) {
@@ -165,14 +182,17 @@ export const ParticleText = ({text = "< / >", defaultMode = 'day'}) => {
         window.addEventListener('resize', resizeCanvas);
 
         return () => {
+            cancelAnimationFrame(animationFrameId);
             window.removeEventListener('resize', resizeCanvas);
         };
-    }, [text, mode]);
+    }, [text]);
 
     return (
         <div className="relative">
             <div className={`w-[300px] md:w-[370px] h-[310px] md:h-[380px] rounded-3xl relative overflow-hidden
-                            transition-colors duration-500 ${mode === 'day' ? 'bg-purple-50' : 'bg-gray-900'}`}>
+                            transition-colors duration-500 border border-purple-100 dark:border-purple-900/40 shadow-inner ${
+                                mode === 'day' ? 'bg-purple-50' : 'bg-gray-900'
+                            }`}>
                 <canvas
                     ref={canvasRef}
                     className="w-full h-full"

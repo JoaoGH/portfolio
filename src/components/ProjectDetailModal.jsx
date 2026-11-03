@@ -70,17 +70,17 @@ export const ProjectDetailsModal = ({project, onClose}) => {
             onClick={onClose}
         >
             <div
-                className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto cursor-auto"
+                className="bg-white dark:bg-gray-900 border border-transparent dark:border-gray-800 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto cursor-auto text-gray-900 dark:text-gray-100"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Header */}
-                <div className="sticky top-0 bg-white border-b border-purple-300 flex justify-between items-center p-4 z-10">
+                <div className="sticky top-0 bg-white dark:bg-gray-900 border-b border-purple-300 dark:border-purple-900/40 flex justify-between items-center p-4 z-10">
                     <h3 className="text-xl font-bold">
                         {t(project.title)}
                     </h3>
                     <button
                         onClick={onClose}
-                        className="cursor-pointer text-gray-500 hover:text-gray-700 transition-colors"
+                        className="cursor-pointer text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
                         aria-label={t("projects.modal.close.hint")}
                     >
                         <FiX size={24}/>
@@ -111,7 +111,7 @@ export const ProjectDetailsModal = ({project, onClose}) => {
                         {images.length > 1 && (
                             <>
                                 <button
-                                    className={`absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-md transition-all ${
+                                    className={`absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full shadow-md transition-all ${
                                         !canScrollPrev ? 'opacity-0 group-hover:opacity-30 cursor-default' : 'opacity-0 group-hover:opacity-100'
                                     }`}
                                     onClick={(e) => {
@@ -125,7 +125,7 @@ export const ProjectDetailsModal = ({project, onClose}) => {
                                 </button>
 
                                 <button
-                                    className={`absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-md transition-all ${
+                                    className={`absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full shadow-md transition-all ${
                                         !canScrollNext ? 'opacity-0 group-hover:opacity-30 cursor-default' : 'opacity-0 group-hover:opacity-100'
                                     }`}
                                     onClick={(e) => {
@@ -146,7 +146,7 @@ export const ProjectDetailsModal = ({project, onClose}) => {
                                 {images.map((_, index) => (
                                     <button
                                         key={index}
-                                        className={`w-2 h-2 rounded-full ${index === selectedIndex ? 'bg-purple-600' : 'bg-gray-300'}`}
+                                        className={`w-2 h-2 rounded-full ${index === selectedIndex ? 'bg-purple-600' : 'bg-gray-300 dark:bg-gray-700'}`}
                                         onClick={() => emblaApi?.scrollTo(index)}
                                         aria-label={`${t("projects.modal.goToImage.hint")} ${index + 1}`}
                                     />
@@ -157,7 +157,7 @@ export const ProjectDetailsModal = ({project, onClose}) => {
 
                     {/* Descrição */}
                     <div className="mb-6">
-                        <p className="text-gray-700 whitespace-pre-line">
+                        <p className="text-gray-700 dark:text-gray-300 whitespace-pre-line">
                             {t(project.details?.fullDescription || project.description)}
                         </p>
                     </div>
@@ -166,7 +166,7 @@ export const ProjectDetailsModal = ({project, onClose}) => {
                     {project.details?.features && (
                         <div className="mb-6">
                             <h4 className="font-semibold mb-2">{t("projects.modal.features.label")}</h4>
-                            <ul className="list-disc pl-5 space-y-1">
+                            <ul className="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
                                 {project.details.features.map((feature, i) => (
                                     <li key={i}>{t(feature)}</li>
                                 ))}
@@ -181,7 +181,7 @@ export const ProjectDetailsModal = ({project, onClose}) => {
                                 href={project.details.codeUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900 transition-colors"
+                                className="flex items-center gap-2 bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded transition-colors"
                             >
                                 <FaGithub/> {t("projects.modal.viewCode.label")}
                             </a>
@@ -199,7 +199,7 @@ export const ProjectDetailsModal = ({project, onClose}) => {
                     </div>
 
                     {/* Tags na parte inferior */}
-                    <div className="mt-8 pt-4 border-t border-purple-300">
+                    <div className="mt-8 pt-4 border-t border-purple-300 dark:border-purple-900/40">
                         <h4 className="font-semibold mb-2">
                             {t("projects.modal.technologies.label")}
                         </h4>
@@ -207,7 +207,7 @@ export const ProjectDetailsModal = ({project, onClose}) => {
                             {project.tags.map((tag, index) => (
                                 <span
                                     key={index}
-                                    className="text-xs bg-purple-100 text-purple-800 px-3 py-1 rounded"
+                                    className="text-xs bg-purple-100 dark:bg-purple-950/60 text-purple-800 dark:text-purple-300 px-3 py-1 rounded"
                                 >
                                     {tag}
                                 </span>

@@ -25,14 +25,14 @@ export const Hero = () => {
             <div className="container mx-auto px-15 py-12 md:py-16">
                 <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
                     <div className="order-2 lg:order-1 text-center lg:text-left">
-                        <h3 className="text-xl lg:text-2xl font-medium text-black">
+                        <h3 className="text-xl lg:text-2xl font-medium text-black dark:text-white">
                             {t("hero.item.1.label")}
                         </h3>
                         <h1 className="w-full lg:w-[480px] text-4xl lg:text-5xl font-bold leading-[50px] lg:leading-[60px]
                                     mt-3 bg-gradient-primary bg-clip-text text-transparent">
                             {t("hero.title")}
                         </h1>
-                        <p className="w-full lg:w-[500px] text-sm lg:text-base mt-4">
+                        <p className="w-full lg:w-[500px] text-sm lg:text-base mt-4 text-gray-600 dark:text-gray-300">
                             {t("hero.item.2.label")}
                         </p>
 

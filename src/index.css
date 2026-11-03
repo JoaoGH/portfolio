@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+    color-scheme: light dark;
+}
+
+:root.dark {
+    color-scheme: dark;
+}
+
+:root:not(.dark) {
+    color-scheme: light;
+}
+
+body {
+    @apply bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300;
+}
+
 @layer utilities {
     .bg-gradient-primary {
         background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
@@ -9,6 +27,9 @@
     }
     .bg-gradient-stats {
         background-image: linear-gradient(to bottom, var(--color-accent), var(--color-white));
+    }
+    .dark .bg-gradient-stats {
+        background-image: linear-gradient(to bottom, rgba(148, 3, 252, 0.25), rgba(17, 24, 39, 0.8));
     }
 }
 
@@ -22,8 +43,8 @@
 @layer components {
     .menu-wrapper {
         @apply md:flex flex-col md:flex-row gap-4 md:gap-8 text-sm font-medium absolute md:static top-[70px] left-0
-        w-full md:w-auto bg-white/45 md:bg-transparent rounded-lg md:rounded-none shadow-md md:shadow-none p-4 md:p-0
-        z-50 border border-purple-200 md:border-none backdrop-blur-[30.90px] md:backdrop-blur-none;
+        w-full md:w-auto bg-white/45 dark:bg-gray-900/80 md:bg-transparent md:dark:bg-transparent rounded-lg md:rounded-none shadow-md md:shadow-none p-4 md:p-0
+        z-50 border border-purple-200 dark:border-purple-900/50 md:border-none backdrop-blur-[30.90px] md:backdrop-blur-none;
     }
 
     .menu-item::before {
@@ -33,7 +54,7 @@
     .menu-item {
         @apply relative before:content-[''] before:absolute before:w-0 before:h-[3px]
         before:rounded-full before:-bottom-1 before:left-0 before:transition-all before:duration-300 hover:before:w-full
-        cursor-pointer;
+        cursor-pointer text-gray-700 dark:text-gray-200;
     }
 
     .action-btn-outline {
@@ -63,8 +84,8 @@
     }
 
     .input-box {
-        @apply bg-purple-50 rounded-2xl border border-purple-100 px-4 py-3 placeholder:text-sm mb-5 focus:outline-none
-        focus:border-primary;
+        @apply bg-purple-50 dark:bg-gray-900 rounded-2xl border border-purple-100 dark:border-purple-900/50 px-4 py-3 placeholder:text-sm mb-5 focus:outline-none
+        focus:border-primary dark:text-white;
     }
 }
 
