@@ -4,6 +4,8 @@ import {StatInfoCard} from "./StatInfoCard.jsx";
 import {useTranslation} from "react-i18next";
 import {ParticleText} from "./ParticleText.jsx";
 import {getYearsOfExperience} from "../utils/experience.js";
+import {Link} from "react-scroll";
+import {FiDownload, FiArrowRight} from "react-icons/fi";
 
 export const Hero = () => {
     const {t, i18n} = useTranslation();
@@ -20,7 +22,7 @@ export const Hero = () => {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-    }
+    };
 
     return (
         <section id="hero" className="border-b border-slate-200/60 dark:border-zinc-900">
@@ -37,14 +39,27 @@ export const Hero = () => {
                             {t("hero.item.2.label", { years: yearsOfExperience })}
                         </p>
 
-                        <div className="flex flex-wrap items-center gap-4 mt-6 sm:mt-7">
+                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mt-7">
                             <button
+                                type="button"
                                 onClick={handleDownload}
                                 aria-label={t("hero.button.2.hint")}
-                                className="w-full sm:w-auto action-btn btn-scale-anim bg-gradient-primary"
+                                className="action-btn btn-scale-anim bg-gradient-primary gap-2"
                             >
-                                {t("hero.button.2.text")}
+                                <FiDownload className="text-base shrink-0"/>
+                                <span>{t("hero.button.2.text")}</span>
                             </button>
+
+                            <Link
+                                to="projects"
+                                smooth
+                                offset={-80}
+                                aria-label={t("hero.button.1.hint")}
+                                className="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-xl font-mono text-xs sm:text-sm font-medium text-slate-700 dark:text-zinc-200 bg-white dark:bg-zinc-900 border border-slate-200/90 dark:border-zinc-800 hover:border-indigo-500/50 dark:hover:border-indigo-400/50 hover:text-indigo-600 dark:hover:text-indigo-400 shadow-2xs transition-all cursor-pointer active:scale-[0.99]"
+                            >
+                                <span>{t("hero.button.1.text")}</span>
+                                <FiArrowRight className="text-sm shrink-0"/>
+                            </Link>
                         </div>
                     </div>
 
@@ -67,5 +82,5 @@ export const Hero = () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
