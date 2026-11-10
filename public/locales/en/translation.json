@@ -88,6 +88,7 @@
   "skills.title": "Skills",
   "skills.text": "My skills are organized by specialty, enabling strategic work across each development layer. Each card details years of experience, implementation complexity, and real-world use cases — and can be filtered by skill type (backend, frontend, etc.) for personalized navigation.",
   "skill.button.showless.text": "Show less",
+  "skill.button.showall.text": "View all skills",
   "skills.tabs.item.1.label": "All",
   "skills.tabs.item.2.label": "Backend",
   "skills.tabs.item.3.label": "Frontend",
