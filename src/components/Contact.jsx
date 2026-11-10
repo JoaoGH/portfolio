@@ -19,7 +19,7 @@ export const Contact = () => {
                         <Trans i18nKey="contact.text" components={{1: <br/>}}/>
                     </p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                    <div className="mt-7 max-w-xl">
                         <ContactInfoCard
                             icon={<IoMdMail className="text-lg"/>}
                             text={ABOUT_ME.email}
