@@ -23,39 +23,37 @@ export const Hero = () => {
     }
 
     return (
-        <section id="hero" className="bg-background">
-            <div className="container mx-auto px-15 py-12 md:py-16">
-                <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
-                    <div className="order-2 lg:order-1 text-center lg:text-left">
-                        <h3 className="text-xl lg:text-2xl font-medium text-black dark:text-white">
+        <section id="hero" className="border-b border-slate-200/60 dark:border-zinc-900">
+            <div className="section-container">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                    <div className="order-2 lg:order-1 lg:col-span-7 text-left">
+                        <p className="font-mono text-xs sm:text-sm font-medium text-indigo-600 dark:text-indigo-400 tracking-tight">
                             {t("hero.item.1.label")}
-                        </h3>
-                        <h1 className="w-full lg:w-[480px] text-4xl lg:text-5xl font-bold leading-[50px] lg:leading-[60px]
-                                    mt-3 bg-gradient-primary bg-clip-text text-transparent">
+                        </p>
+                        <h1 className="font-mono text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.15] mt-2 text-slate-900 dark:text-zinc-50">
                             {t("hero.title")}
                         </h1>
-                        <p className="w-full lg:w-[500px] text-sm lg:text-base mt-4 text-gray-600 dark:text-gray-300">
+                        <p className="text-sm sm:text-base leading-relaxed mt-4 text-slate-600 dark:text-zinc-400 max-w-[62ch]">
                             {t("hero.item.2.label", { years: yearsOfExperience })}
                         </p>
 
-                        <div className="flex justify-center lg:justify-start gap-4 md:gap-8 mt-6">
+                        <div className="flex flex-wrap items-center gap-4 mt-6 sm:mt-7">
                             <button
                                 onClick={handleDownload}
                                 aria-label={t("hero.button.2.hint")}
-                                className="flex-1 md:flex-none action-btn btn-scale-anim bg-gradient-primary"
+                                className="w-full sm:w-auto action-btn btn-scale-anim bg-gradient-primary"
                             >
                                 {t("hero.button.2.text")}
                             </button>
                         </div>
                     </div>
 
-                    <div
-                        className="order-1 lg:order-2">
+                    <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center lg:justify-end">
                         <ParticleText text="< / >"/>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 md:mt-16">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-10 lg:mt-12">
                     {STATS.map((item) => {
                         return (
                             <StatInfoCard

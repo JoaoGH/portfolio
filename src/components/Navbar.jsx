@@ -46,12 +46,14 @@ export const Navbar = () => {
     }, []);
 
     return (
-        <header className="sticky top-0 z-50 w-full bg-white/25 dark:bg-gray-950/40 backdrop-blur-md border-b border-purple-200/50 dark:border-purple-900/40"
-             ref={navbarRef}>
-            <nav className="container mx-auto px-4">
-                <div className="flex items-center h-16">
+        <header
+            className="sticky top-0 z-50 w-full bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-slate-200/80 dark:border-zinc-800/80 transition-colors"
+            ref={navbarRef}
+        >
+            <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center justify-between h-16">
                     {/* Logo e Menu */}
-                    <div className="flex items-center flex-1">
+                    <div className="flex items-center gap-6">
                         {/* Logo */}
                         <Link
                             activeClass="active"
@@ -59,14 +61,19 @@ export const Navbar = () => {
                             smooth
                             spy
                             offset={-100}
-                            className="flex items-center justify-center rounded-full cursor-pointer mr-4"
+                            className="flex items-center gap-2 rounded-lg cursor-pointer py-1 focus:outline-none"
                             onClick={closeMenu}
                         >
-                            <FaCode className="text-xl text-purple-600 dark:text-purple-400"/>
+                            <span className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-zinc-900 border border-slate-200/80 dark:border-zinc-800 flex items-center justify-center">
+                                <FaCode className="text-base text-indigo-600 dark:text-indigo-400"/>
+                            </span>
+                            <span className="font-mono text-sm font-semibold tracking-tight text-slate-900 dark:text-zinc-100 hidden sm:inline">
+                                jghartmann.dev
+                            </span>
                         </Link>
 
                         {/* Menu Desktop */}
-                        <ul className="hidden md:flex items-center space-x-4">
+                        <ul className="hidden md:flex items-center space-x-1 lg:space-x-2">
                             {MENU_LINKS.map((item) => {
                                 return (
                                     <li key={item.id}>
@@ -77,7 +84,7 @@ export const Navbar = () => {
                                             spy
                                             offset={item.offset}
                                             aria-label={t(item.label + ".hint")}
-                                            className="menu-item px-3 py-2 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                                            className="menu-item px-3 py-2 transition-colors"
                                         >
                                             {t(item.label + ".label")}
                                         </Link>
@@ -90,22 +97,22 @@ export const Navbar = () => {
                     {/* Controles do lado direito */}
                     <div className="flex items-center gap-2">
                         {/* Seletor de Idioma e Tema Desktop */}
-                        <div className="hidden md:flex items-center gap-2">
+                        <div className="hidden md:flex items-center gap-1.5">
                             <ThemeToggle />
                             <LanguageSelector/>
                         </div>
 
                         {/* Botão Mobile */}
-                        <div className="flex md:hidden items-center gap-2">
+                        <div className="flex md:hidden items-center gap-1.5">
                             <ThemeToggle mobile={true} />
                             <LanguageSelector mobile={true}/>
                             <button
                                 onClick={toggleMenu}
-                                className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-700 dark:text-gray-200"
+                                className="p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-700 dark:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-800 transition-colors"
                                 aria-label={t("navbar.item.menu.hint")}
                                 aria-expanded={isOpen}
                             >
-                                <svg className="w-6 h-6"
+                                <svg className="w-5 h-5"
                                      fill="none"
                                      stroke="currentColor"
                                      viewBox="0 0 24 24"
@@ -124,9 +131,9 @@ export const Navbar = () => {
                 </div>
 
                 {/* Menu Mobile */}
-                <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} absolute top-16 right-2 bg-white dark:bg-gray-900 rounded-lg ml-12 min-w-3xs
-                                shadow-lg border border-purple-200 dark:border-purple-800`}>
-                    <ul className="flex flex-col p-2 w-auto min-w-[160px]">
+                <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} absolute top-16 right-4 bg-white dark:bg-zinc-900 rounded-xl
+                                shadow-lg border border-slate-200 dark:border-zinc-800 overflow-hidden`}>
+                    <ul className="flex flex-col p-2 min-w-[180px]">
                         {MENU_LINKS.map((item) => (
                             <li key={item.id}>
                                 <Link
@@ -136,7 +143,7 @@ export const Navbar = () => {
                                     spy
                                     offset={item.offset}
                                     aria-label={t(item.label + ".hint")}
-                                    className="menu-item block px-3 py-2 hover:bg-purple-50 dark:hover:bg-purple-950/50 rounded-md transition-colors"
+                                    className="menu-item block px-3.5 py-2.5 hover:bg-slate-100 dark:hover:bg-zinc-800/80 rounded-lg transition-colors"
                                     onClick={closeMenu}
                                 >
                                     {t(item.label + ".label")}

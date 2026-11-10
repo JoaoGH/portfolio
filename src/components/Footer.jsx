@@ -5,17 +5,17 @@ export const Footer = () => {
     const { t } = useTranslation();
 
     return (
-        <footer id="footer" className="bg-purple-100 dark:bg-gray-900 border-t border-purple-200 dark:border-purple-900/40 text-xs text-secondary dark:text-purple-300 p-5 transition-colors">
-            <div className="container mx-auto px-15 flex flex-col md:flex-row items-center justify-between text-sm">
+        <footer id="footer" className="bg-white dark:bg-zinc-950 border-t border-slate-200/80 dark:border-zinc-800/80 text-xs text-slate-500 dark:text-zinc-400 py-6 transition-colors">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
                 {/* Direitos e créditos à esquerda */}
-                <div className="mb-4 md:mb-0">
+                <div>
                     <p>© {new Date().getFullYear() + " " + t("footer.copyright")}</p>
                 </div>
 
                 {/* Info sobre tecnologias e versão à direita */}
                 <div className="flex items-center gap-3">
                     <p>{t("footer.using")}</p>
-                    <span className="px-2 py-1 rounded-md bg-purple-200 dark:bg-purple-950/80 text-secondary dark:text-purple-300 border border-purple-300 dark:border-purple-800 font-medium">
+                    <span className="font-mono text-xs px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-zinc-900 text-slate-700 dark:text-zinc-300 border border-slate-200 dark:border-zinc-800 font-medium">
                         v{import.meta.env.PACKAGE_VERSION}
                     </span>
                 </div>

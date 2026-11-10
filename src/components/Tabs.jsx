@@ -14,21 +14,27 @@ export const Tabs = ({tabList, activeTab, onChange}) => {
 
     const getActiveStyles = (value) => {
         return activeTab === value
-            ? "text-white bg-gradient-primary shadow-sm font-medium"
-            : "text-gray-700 dark:text-gray-200 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700";
+            ? "text-white bg-indigo-600 dark:bg-indigo-500 shadow-xs font-medium"
+            : "text-slate-600 dark:text-zinc-400 bg-transparent hover:text-slate-900 dark:hover:text-zinc-100 hover:bg-slate-200/60 dark:hover:bg-zinc-800/70";
     };
 
     return (
         <div className="w-full space-y-2">
-            {/* Mobile: grid duas colunas*/}
-            <div className="flex flex-wrap gap-2">
+            {/* Barra segmentada horizontal: desliza suavemente no mobile sem quebrar em várias linhas */}
+            <div
+                className="flex items-center gap-1.5 overflow-x-auto sm:flex-wrap p-1.5 rounded-xl bg-slate-200/60 dark:bg-zinc-900/90 border border-slate-200/80 dark:border-zinc-800/80 w-full sm:w-fit"
+                role="tablist"
+            >
                 {mainTabs.map((item) => {
+                    const isActive = activeTab === item.value;
                     return (
                         <motion.button
                             key={item.id}
-                            className={`px-4 py-2 text-sm rounded-lg transition-all ${getActiveStyles(item.value)}`}
+                            type="button"
+                            role="tab"
+                            aria-selected={isActive}
+                            className={`shrink-0 px-3.5 py-2 font-mono text-xs sm:text-[13px] rounded-lg transition-all cursor-pointer ${getActiveStyles(item.value)}`}
                             onClick={() => onChange(item.value)}
-                            whileHover={{scale: activeTab === item.value ? 1 : 1.05}}
                             whileTap={{scale: 0.98}}
                         >
                             {t(item.label + ".label")}
@@ -38,9 +44,10 @@ export const Tabs = ({tabList, activeTab, onChange}) => {
 
                 {hasExtras && (
                     <motion.button
-                        className="px-3 py-2 text-sm bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-700"
+                        type="button"
+                        className="shrink-0 px-3 py-2 font-mono text-xs sm:text-[13px] bg-slate-200/80 dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 rounded-lg hover:bg-slate-300 dark:hover:bg-zinc-700 cursor-pointer"
                         onClick={() => setShowMore(!showMore)}
-                        whileHover={{scale: 1.05}}
+                        whileTap={{scale: 0.98}}
                     >
                         {showMore ? t('skill.button.showless.text') : `+${extraTabs.length}`}
                     </motion.button>
@@ -55,14 +62,14 @@ export const Tabs = ({tabList, activeTab, onChange}) => {
                         exit={{opacity: 0, height: 0}}
                         className="overflow-hidden"
                     >
-                        <div className="flex flex-wrap gap-2 pt-2">
+                        <div className="flex flex-wrap gap-1.5 pt-1">
                             {extraTabs.map((item) => {
                                 return (
                                     <motion.button
                                         key={item.id}
-                                        className={`px-4 py-2 text-sm rounded-lg transition-all ${getActiveStyles(item.value)}`}
+                                        type="button"
+                                        className={`px-3.5 py-2 font-mono text-xs sm:text-[13px] rounded-lg transition-all cursor-pointer ${getActiveStyles(item.value)}`}
                                         onClick={() => onChange(item.value)}
-                                        whileHover={{scale: activeTab === item.value ? 1 : 1.05}}
                                         whileTap={{scale: 0.98}}
                                     >
                                         {t(item.label + ".label")}

@@ -47,21 +47,22 @@ export const LanguageSelector = ({mobile = false}) => {
                 onClick={toggleDropdown}
                 aria-label={t("navbar.item.language.hint")}
                 className={`
-                    flex items-center gap-2 p-2 rounded-full transition-colors ${mobile ? "hover:bg-white/20" : "hover:bg-purple-50 dark:hover:bg-gray-800"}
-                    md:text-[14px] font-medium transition-transform duration-300 ease-in-out hover:scale-105 text-gray-700 dark:text-gray-200`}>
-                <FaGlobe className="mr-2 text-gray-700 dark:text-gray-200"/>
+                    flex items-center gap-1.5 px-2.5 py-2 rounded-lg transition-colors cursor-pointer ${mobile ? "hover:bg-white/20" : "hover:bg-slate-100 dark:hover:bg-zinc-800"}
+                    font-mono text-xs font-medium text-slate-700 dark:text-zinc-200`}
+            >
+                <FaGlobe className="w-4 h-4 text-slate-700 dark:text-zinc-200"/>
                 {!mobile && (
                     <>
-                        <span className="text-sm font-medium">{currentLanguage.code.toUpperCase()}</span>
-                        <FaChevronDown className={`ml-2 text-xs transition-transform ${isOpen ? "rotate-180" : ""}`}/>
+                        <span>{currentLanguage.code.toUpperCase()}</span>
+                        <FaChevronDown className={`text-[10px] transition-transform ${isOpen ? "rotate-180" : ""}`}/>
                     </>
                 )}
             </button>
 
             {isOpen && (
                 <div className={
-                    `absolute right-0 mt-2 w-48 bg-white dark:bg-gray-900 rounded-lg shadow-lg z-50 
-                        border border-gray-200 dark:border-gray-800 divide-y divide-gray-100 dark:divide-gray-800
+                    `absolute right-0 mt-2 w-44 bg-white dark:bg-zinc-900 rounded-xl shadow-lg z-50 
+                        border border-slate-200 dark:border-zinc-800 divide-y divide-slate-100 dark:divide-zinc-800 overflow-hidden
                         ${mobile ? "origin-top-right" : "origin-top"}
                         `}
                 >
@@ -71,11 +72,11 @@ export const LanguageSelector = ({mobile = false}) => {
                                 key={lang.code}
                                 onClick={() => changeLanguage(lang.code)}
                                 className={
-                                    `flex items-center w-full px-4 py-2 text-left
-                                     hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors 
-                                     ${i18n.language === lang.code ? "bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400" : "text-gray-700 dark:text-gray-200"}`}
+                                    `flex items-center w-full px-3.5 py-2.5 text-left text-xs font-medium cursor-pointer
+                                     hover:bg-slate-50 dark:hover:bg-zinc-800/80 transition-colors 
+                                     ${i18n.language === lang.code ? "bg-indigo-50/80 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400" : "text-slate-700 dark:text-zinc-200"}`}
                             >
-                                <span className="mr-2 text-lg">{lang.country_code}</span>
+                                <span className="mr-2 font-mono uppercase text-[11px] opacity-75">{lang.country_code}</span>
                                 <span>{lang.name}</span>
                             </button>
                         );

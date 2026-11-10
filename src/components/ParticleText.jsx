@@ -1,17 +1,17 @@
 import React, {useEffect, useRef} from "react";
 import {useTheme} from "../hooks/useTheme.js";
 
-// Cores para os modos
+// Cores calibradas para os modos (menos saturadas, harmônicas com a paleta)
 const colors = {
     day: {
-        bg: '#f5f3ff',
-        particles: ['#6D28D9', '#F472B6', '#2DD4BF'],
-        connections: '#c4b5fd'
+        bg: '#f8fafc',
+        particles: ['#4f46e5', '#0ea5e9', '#64748b'],
+        connections: '#cbd5e1'
     },
     night: {
-        bg: '#111827',
-        particles: ['#8B5CF6', '#EC4899', '#06B6D4'],
-        connections: '#4c1d95'
+        bg: '#18181b',
+        particles: ['#818cf8', '#38bdf8', '#a1a1aa'],
+        connections: '#3f3f46'
     }
 };
 
@@ -45,8 +45,8 @@ export const ParticleText = ({text = "< / >"}) => {
 
         // Configurações
         const fontSettings = {
-            size: 110,
-            family: 'Arial',
+            size: 95,
+            family: 'monospace',
             weight: 'bold'
         };
 
@@ -150,7 +150,7 @@ export const ParticleText = ({text = "< / >"}) => {
         const drawConnections = () => {
             const particles = particlesRef.current;
             const currentMode = modeRef.current;
-            ctx.strokeStyle = `${colors[currentMode].connections}30`;
+            ctx.strokeStyle = `${colors[currentMode].connections}40`;
             ctx.lineWidth = 0.5;
 
             for (let i = 0; i < particles.length; i++) {
@@ -188,10 +188,10 @@ export const ParticleText = ({text = "< / >"}) => {
     }, [text]);
 
     return (
-        <div className="relative">
-            <div className={`w-[300px] md:w-[370px] h-[310px] md:h-[380px] rounded-3xl relative overflow-hidden
-                            transition-colors duration-500 border border-purple-100 dark:border-purple-900/40 shadow-inner ${
-                                mode === 'day' ? 'bg-purple-50' : 'bg-gray-900'
+        <div className="relative w-full max-w-[290px] sm:max-w-[340px] lg:max-w-[360px]">
+            <div className={`w-full h-[260px] sm:h-[310px] lg:h-[340px] rounded-2xl relative overflow-hidden
+                            transition-colors duration-500 border border-slate-200/80 dark:border-zinc-800/80 shadow-xs ${
+                                mode === 'day' ? 'bg-purple-50/20' : 'bg-gray-900/90'
                             }`}>
                 <canvas
                     ref={canvasRef}
