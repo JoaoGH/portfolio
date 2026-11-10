@@ -1,3 +1,11 @@
+## [1.4.3](https://github.com/JoaoGH/portfolio/compare/v1.4.2...v1.4.3) (2026-11-10)
+
+### ♻️ Code Refactoring
+
+* adicionar link para projetos ([90e9d08](https://github.com/JoaoGH/portfolio/commit/90e9d0895bb90900d48f7f70300654ee2c90141c))
+* melhorar exibição de links uteis e texto sobre mim ([876a2ec](https://github.com/JoaoGH/portfolio/commit/876a2ec0439c9bf7e9e49f157744b4dfbd93069c))
+* melhorar informações de contato. ([569e432](https://github.com/JoaoGH/portfolio/commit/569e432c1597bc5bb98827e1971b61f1d143acac))
+
 ## [1.4.2](https://github.com/JoaoGH/portfolio/compare/v1.4.1...v1.4.2) (2026-11-10)
 
 ### 🐛 Bug Fixes
