@@ -8,21 +8,22 @@ export const Contact = () => {
     const { t } = useTranslation();
 
     return (
-        <section id="contact" className="bg-background">
-            <div className="container mx-auto px-15 py-12 md:py-16">
-                <h2 className="section-title bg-gradient-primary text-left">
-                    {t("contact.title")}
-                </h2>
+        <section id="contact">
+            <div className="section-container">
+                <div className="max-w-3xl">
+                    <h2 className="section-title">
+                        {t("contact.title")}
+                    </h2>
 
-                <div className="mt-4 md:mt-6">
-                    <p className="text-sm text-justify leading-6 whitespace-pre-line text-gray-700 dark:text-gray-300">
+                    <p className="text-sm sm:text-base text-left leading-relaxed whitespace-pre-line text-slate-600 dark:text-zinc-300 mt-3">
                         <Trans i18nKey="contact.text" components={{1: <br/>}}/>
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 md:gap-16 mt-16">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
                         <ContactInfoCard
-                            icon={<IoMdMail/>}
-                            text={ABOUT_ME.email}/>
+                            icon={<IoMdMail className="text-lg"/>}
+                            text={ABOUT_ME.email}
+                        />
                     </div>
                 </div>
             </div>

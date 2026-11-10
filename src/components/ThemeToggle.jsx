@@ -17,14 +17,14 @@ export const ThemeToggle = ({ mobile = false }) => {
       onClick={toggleTheme}
       aria-label={ariaLabel}
       title={ariaLabel}
-      className={`p-2 rounded-full cursor-pointer transition-all duration-300 ease-in-out hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-700 dark:text-gray-200 ${
-        mobile ? 'hover:bg-white/20' : 'hover:bg-purple-50 dark:hover:bg-gray-800'
+      className={`p-2 rounded-lg cursor-pointer transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-700 dark:text-zinc-200 ${
+        mobile ? 'hover:bg-white/20' : 'hover:bg-slate-100 dark:hover:bg-zinc-800'
       }`}
     >
       {isDark ? (
-        <FaSun className="w-4 h-4 text-gray-200 transition-transform duration-300 hover:rotate-45" />
+        <FaSun className="w-4 h-4 text-zinc-200 transition-transform duration-300 hover:rotate-45" />
       ) : (
-        <FaMoon className="w-4 h-4 text-gray-700 dark:text-gray-200 transition-transform duration-300 hover:-rotate-12" />
+        <FaMoon className="w-4 h-4 text-slate-700 dark:text-zinc-200 transition-transform duration-300 hover:-rotate-12" />
       )}
     </button>
   );

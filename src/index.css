@@ -2,90 +2,115 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+    --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --color-primary: #6366f1;
+    --color-secondary: #4f46e5;
+    --color-accent: #e0e7ff;
+    --color-skill: #eef2ff;
+}
+
 :root {
     color-scheme: light dark;
+    accent-color: var(--color-primary);
+    scrollbar-width: thin;
+    scrollbar-color: #94a3b8 transparent;
 }
 
 :root.dark {
     color-scheme: dark;
+    scrollbar-color: #3f3f46 transparent;
 }
 
 :root:not(.dark) {
     color-scheme: light;
 }
 
+::selection {
+    background-color: rgba(99, 102, 241, 0.2);
+    color: inherit;
+}
+
 body {
-    @apply bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300;
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    text-align: start;
+    @apply bg-slate-50 text-slate-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased transition-colors duration-300;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-mono);
+    text-wrap: balance;
+}
+
+p, li {
+    text-wrap: pretty;
+    overflow-wrap: break-word;
 }
 
 @layer utilities {
     .bg-gradient-primary {
-        background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+        background-image: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
     }
     .bg-gradient-skill {
-        background-image: linear-gradient(to bottom, var(--color-skill), var(--color-white));
+        background-color: rgba(99, 102, 241, 0.08);
+    }
+    .dark .bg-gradient-skill {
+        background-color: rgba(99, 102, 241, 0.12);
     }
     .bg-gradient-stats {
-        background-image: linear-gradient(to bottom, var(--color-accent), var(--color-white));
+        background-color: #ffffff;
     }
     .dark .bg-gradient-stats {
-        background-image: linear-gradient(to bottom, rgba(148, 3, 252, 0.25), rgba(17, 24, 39, 0.8));
+        background-color: rgba(24, 24, 27, 0.85);
     }
-}
-
-@theme {
-    --color-primary: #9403fc;
-    --color-secondary: #7470f0;
-    --color-accent: #c4b5fd;
-    --color-skill: #db9cdb;
 }
 
 @layer components {
+    .section-container {
+        @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16;
+    }
+
     .menu-wrapper {
         @apply md:flex flex-col md:flex-row gap-4 md:gap-8 text-sm font-medium absolute md:static top-[70px] left-0
-        w-full md:w-auto bg-white/45 dark:bg-gray-900/80 md:bg-transparent md:dark:bg-transparent rounded-lg md:rounded-none shadow-md md:shadow-none p-4 md:p-0
-        z-50 border border-purple-200 dark:border-purple-900/50 md:border-none backdrop-blur-[30.90px] md:backdrop-blur-none;
+        w-full md:w-auto bg-white/90 dark:bg-zinc-900/95 md:bg-transparent md:dark:bg-transparent rounded-xl md:rounded-none shadow-lg md:shadow-none p-4 md:p-0
+        z-50 border border-slate-200 dark:border-zinc-800 md:border-none backdrop-blur-md md:backdrop-blur-none;
     }
 
     .menu-item::before {
-        background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+        background-color: var(--color-primary);
     }
 
     .menu-item {
-        @apply relative before:content-[''] before:absolute before:w-0 before:h-[3px]
-        before:rounded-full before:-bottom-1 before:left-0 before:transition-all before:duration-300 hover:before:w-full
-        cursor-pointer text-gray-700 dark:text-gray-200;
+        @apply relative font-mono text-xs sm:text-sm font-medium tracking-tight before:content-[''] before:absolute before:w-0 before:h-[2px]
+        before:rounded-full before:-bottom-0.5 before:left-0 before:transition-all before:duration-300 hover:before:w-full
+        cursor-pointer text-slate-600 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white;
     }
 
     .action-btn-outline {
-        @apply h-10 md:h-12 text-xs md:text-[14px] font-medium text-primary px-4 lg:px-10 rounded-[71px] border-2
-        border-primary;
+        @apply h-11 text-xs sm:text-sm font-mono font-medium text-primary px-6 rounded-xl border
+        border-primary/40 hover:border-primary hover:bg-primary/5 transition-all;
     }
 
     .action-btn {
-        @apply h-10 md:h-12 text-xs md:text-[14px] font-medium text-white px-4 lg:px-10 rounded-[71px];
+        @apply inline-flex items-center justify-center h-11 text-xs sm:text-sm font-mono font-medium text-white px-6 sm:px-7 rounded-xl shadow-xs cursor-pointer;
     }
 
     .btn-scale-anim {
-        @apply transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg;
-    }
-
-    .profile-pic {
-        @apply w-[300px] md:w-[370px] h-[300px] md:h-[370px] rotate-[5.75deg] transition-transform duration-300
-        ease-in-out hover:scale-105 hover:rotate-[3deg] rounded-xl
+        @apply transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:scale-[0.99];
     }
 
     .section-title {
-        @apply text-[20px] font-semibold text-left text-center bg-clip-text text-transparent;
+        @apply font-mono text-xl sm:text-2xl md:text-[1.65rem] font-bold tracking-tight text-left text-slate-900 dark:text-zinc-50;
     }
 
     .arrow-btn {
-        @apply absolute top-1/2 transform -translate-y-1/2 bg-primary text-white p-2 rounded-full shadow;
+        @apply inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-slate-700 dark:text-zinc-300 hover:border-primary/50 hover:text-primary dark:hover:text-indigo-400 transition-all shadow-2xs;
     }
 
     .input-box {
-        @apply bg-purple-50 dark:bg-gray-900 rounded-2xl border border-purple-100 dark:border-purple-900/50 px-4 py-3 placeholder:text-sm mb-5 focus:outline-none
+        @apply bg-white dark:bg-zinc-900 rounded-xl border border-slate-200 dark:border-zinc-800 px-4 py-3 placeholder:text-sm mb-5 focus:outline-none
         focus:border-primary dark:text-white;
     }
 }
-

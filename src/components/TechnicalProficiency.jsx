@@ -24,43 +24,44 @@ export const TechnicalProficiency = () => {
     };
 
     return (
-        <section id="skills" className="bg-background">
-            <div className="container mx-auto px-15 py-12 md:py-16">
-                <h2 className="section-title bg-gradient-primary text-left">
-                    {t("skills.title")}
-                </h2>
+        <section id="skills" className="border-b border-slate-200/60 dark:border-zinc-900">
+            <div className="section-container">
+                <div className="max-w-3xl">
+                    <h2 className="section-title">
+                        {t("skills.title")}
+                    </h2>
 
-                <div className="mt-4 md:mt-6">
-                    <p className="text-sm text-justify leading-6 whitespace-pre-line">
+                    <p className="text-sm sm:text-base text-left leading-relaxed whitespace-pre-line text-slate-600 dark:text-zinc-400 mt-3">
                         {t("skills.text")}
                     </p>
+                </div>
 
-                    <div className="mt-6 md:mt-8">
-                        <Tabs
-                            tabList={SKILLS_TAB}
-                            activeTab={activeTab}
-                            onChange={handleTabValueChange}
-                        />
+                <div className="mt-7 md:mt-8">
+                    <Tabs
+                        tabList={SKILLS_TAB}
+                        activeTab={activeTab}
+                        onChange={handleTabValueChange}
+                    />
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
-                            {tabData.map((skill, index) => {
-                                return (
-                                    <motion.div
-                                        key={skill.id}
-                                        initial={{opacity: 0, y: 20}}
-                                        animate={{opacity: 1, y: 0}}
-                                        transition={{duration: 0.4, delay: index * 0.1}}
-                                    >
-                                        <SkillCard
-                                            icon={<skill.icon className="w-6 h-6 text-primary"/>}
-                                            name={skill.name}
-                                            description={t(skill.description)}
-                                            progress={skill.progress}
-                                        />
-                                    </motion.div>
-                                );
-                            })}
-                        </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mt-6 items-stretch">
+                        {tabData.map((skill, index) => {
+                            return (
+                                <motion.div
+                                    key={skill.id}
+                                    className="h-full"
+                                    initial={{opacity: 0, y: 14}}
+                                    animate={{opacity: 1, y: 0}}
+                                    transition={{duration: 0.3, delay: Math.min(index * 0.04, 0.3)}}
+                                >
+                                    <SkillCard
+                                        icon={<skill.icon className="w-5 h-5 text-indigo-600 dark:text-indigo-400"/>}
+                                        name={skill.name}
+                                        description={t(skill.description)}
+                                        progress={skill.progress}
+                                    />
+                                </motion.div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
