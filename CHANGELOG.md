@@ -1,3 +1,14 @@
+## [1.4.2](https://github.com/JoaoGH/portfolio/compare/v1.4.1...v1.4.2) (2026-11-10)
+
+### 🐛 Bug Fixes
+
+* corrigir tamanho icone ([7a766f1](https://github.com/JoaoGH/portfolio/commit/7a766f1711c6433975a5d1eb26e6ee5bcea32a96))
+
+### ♻️ Code Refactoring
+
+* melhorar navegação da seção de habilidades ([262d390](https://github.com/JoaoGH/portfolio/commit/262d39069e98c6fca38eb8831857c12d6f3c7b3c))
+* refina sistema de design, tipografia, paleta de cores e responsividade ([69318b9](https://github.com/JoaoGH/portfolio/commit/69318b9dd64d39679db28a8c8fe0eec9c30704d1))
+
 ## [1.4.1](https://github.com/JoaoGH/portfolio/compare/v1.4.0...v1.4.1) (2026-11-03)
 
 ### 🐛 Bug Fixes
