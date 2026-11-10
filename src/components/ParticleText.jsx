@@ -45,7 +45,7 @@ export const ParticleText = ({text = "< / >"}) => {
 
         // Configurações
         const fontSettings = {
-            size: 104,
+            size: 95,
             family: 'monospace',
             weight: 'bold'
         };
